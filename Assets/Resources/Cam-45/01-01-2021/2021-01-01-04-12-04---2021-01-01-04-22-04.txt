@@ -1,0 +1,8 @@
+0,Counter(), 0, Counter()
+0,Counter(), 0, Counter()
+0,Counter(), 1, Counter({'motorcycle': 1})
+0,Counter(), 1, Counter({'motorcycle': 1})
+1,Counter({'motorcycle': 1}), 1, Counter({'motorcycle': 1})
+0,Counter(), 2, Counter({'motorcycle': 2})
+1,Counter({'motorcycle': 1}), 3, Counter({'motorcycle': 1, 'bus': 1, 'car': 1})
+1,Counter({'car': 1}), 2, Counter({'motorcycle': 2})
