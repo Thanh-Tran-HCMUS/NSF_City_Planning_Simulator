@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>7.3</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{983B8E68-5E9A-2B58-11CC-7635D9EB2D05}</ProjectGuid>
+    <ProjectGuid>{4DDF8D70-68C0-81C2-2AAC-B41C5AB72F68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,13 +51,9 @@
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2020.1.5f1</UnityVersion>
   </PropertyGroup>
-  <PropertyGroup>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
-    <UnityVersion>2020.1.5f1</UnityVersion>
-  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\HomeMenu.cs" />
     <Compile Include="Assets\Scripts\SelectCamera.cs" />
@@ -75,151 +71,153 @@
     <Compile Include="Assets\PathFinder.cs" />
     <Compile Include="Assets\Scripts\Highlight_Line.cs" />
     <Compile Include="Assets\Other\Street.cs" />
+    <Compile Include="Assets\Scripts\LoadData.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-35-16---2021-01-01-16-45-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-30-18---2021-01-01-02-40-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-40-17---2021-01-01-00-50-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-24-53---2021-01-01-08-34-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-04-53---2021-01-01-08-14-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-05-16---2021-01-01-14-15-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-30-18---2021-01-01-01-40-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-35-15---2021-01-01-11-45-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-25-15---2021-01-01-10-35-15.txt" />
-    <None Include="Assets\Resources\TotalCount.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-14-53---2021-01-01-07-24-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-40-18---2021-01-01-03-50-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-55-17---2021-01-01-22-05-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-45-16---2021-01-01-16-55-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-45-17---2021-01-01-21-55-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-54-53---2021-01-01-08-04-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-55-16---2021-01-01-13-05-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2020-12-31-23-58-29---2021-01-01-00-08-29.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-44-53---2021-01-01-07-54-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-35-16---2021-01-01-18-45-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-35-17---2021-01-01-20-45-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-35-16---2021-01-01-14-45-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-15-15---2021-01-01-09-25-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-04-53---2021-01-01-07-14-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-50-18---2021-01-01-03-00-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-35-16---2021-01-01-13-45-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-15-15---2021-01-01-12-25-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-34-53---2021-01-01-08-44-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-44-53---2021-01-01-06-54-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-05-16---2021-01-01-13-15-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-15-15---2021-01-01-10-25-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-35-17---2021-01-01-22-45-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-42-04---2021-01-01-04-52-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-35-15---2021-01-01-12-45-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-25-16---2021-01-01-16-35-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-10-18---2021-01-01-03-20-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-25-16---2021-01-01-17-35-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-44-53---2021-01-01-05-54-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-45-15---2021-01-01-09-55-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-01-34---2021-01-01-04-11-34.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-25-17---2021-01-01-20-35-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-05-15---2021-01-01-12-15-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-25-15---2021-01-01-09-35-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-25-17---2021-01-01-22-35-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-54-53---2021-01-01-06-04-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-50-18---2021-01-01-02-00-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-05-17---2021-01-01-21-15-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-25-16---2021-01-01-18-35-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-22-04---2021-01-01-05-32-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-32-04---2021-01-01-04-42-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-15-16---2021-01-01-16-25-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-24-53---2021-01-01-06-34-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-15-16---2021-01-01-15-25-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-55-15---2021-01-01-09-05-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-55-16---2021-01-01-14-05-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-00-18---2021-01-01-03-10-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-15-16---2021-01-01-19-25-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-45-15---2021-01-01-08-55-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-35-15---2021-01-01-10-45-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-45-15---2021-01-01-10-55-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-55-17---2021-01-01-20-05-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-50-18---2021-01-01-04-00-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-55-15---2021-01-01-10-05-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-15-16---2021-01-01-14-25-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-45-16---2021-01-01-18-55-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-25-16---2021-01-01-19-35-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-45-17---2021-01-01-22-55-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-50-18---2021-01-01-01-00-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-19-18---2021-01-01-00-29-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-35-16---2021-01-01-17-45-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-30-18---2021-01-01-03-40-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-05-16---2021-01-01-15-15-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-24-53---2021-01-01-07-34-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-12-04---2021-01-01-04-22-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-54-53---2021-01-01-07-04-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-15-16---2021-01-01-17-25-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-20-18---2021-01-01-01-30-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-05-15---2021-01-01-09-15-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-05-16---2021-01-01-16-15-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-05-16---2021-01-01-17-15-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-25-16---2021-01-01-14-35-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-34-53---2021-01-01-07-44-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-25-17---2021-01-01-21-35-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-55-16---2021-01-01-16-05-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-45-16---2021-01-01-15-55-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-00-18---2021-01-01-01-10-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-55-16---2021-01-01-18-05-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-25-16---2021-01-01-15-35-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-15-17---2021-01-01-21-25-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-55-17---2021-01-01-21-05-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-25-15---2021-01-01-12-35-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-09-18---2021-01-01-00-19-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-23-05-17---2021-01-01-23-15-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-10-18---2021-01-01-01-20-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-45-15---2021-01-01-12-55-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-45-16---2021-01-01-19-55-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-45-16---2021-01-01-13-55-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-34-53---2021-01-01-06-44-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-45-15---2021-01-01-11-55-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-45-16---2021-01-01-14-55-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-15-16---2021-01-01-13-25-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-30-17---2021-01-01-00-40-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-55-15---2021-01-01-12-05-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-23-15-17---2021-01-01-23-25-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-35-16---2021-01-01-19-45-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-05-15---2021-01-01-10-15-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-05-16---2021-01-01-18-15-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-05-17---2021-01-01-22-15-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-15-17---2021-01-01-22-25-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-12-04---2021-01-01-05-22-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-04-53---2021-01-01-06-14-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-55-15---2021-01-01-11-05-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-15-17---2021-01-01-20-25-17.txt" />
-    <None Include="Assets\P_Assets\Poly City - Free Cartoon Pack\Readme.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-10-18---2021-01-01-02-20-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-45-17---2021-01-01-20-55-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-40-18---2021-01-01-02-50-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-55-16---2021-01-01-15-05-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-40-18---2021-01-01-01-50-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-02-04---2021-01-01-05-12-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-05-15---2021-01-01-11-15-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-15-15---2021-01-01-11-25-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-20-18---2021-01-01-02-30-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-55-16---2021-01-01-17-05-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-25-15---2021-01-01-11-35-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-34-07---2021-01-01-05-44-07.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-20-18---2021-01-01-03-30-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-25-16---2021-01-01-13-35-16.txt" />
-    <None Include="Assets\Resources\actors.xml" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-22-04---2021-01-01-04-32-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-35-17---2021-01-01-21-45-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-14-53---2021-01-01-06-24-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-15-16---2021-01-01-18-25-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-00-18---2021-01-01-02-10-18.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-05-16---2021-01-01-19-15-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-55-16---2021-01-01-19-05-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-35-15---2021-01-01-09-45-15.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-14-53---2021-01-01-08-24-53.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-55-17---2021-01-01-23-05-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-52-04---2021-01-01-05-02-04.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-05-17---2021-01-01-20-15-17.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-45-16---2021-01-01-17-55-16.txt" />
-    <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-35-16---2021-01-01-15-45-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-35-16---2021-01-01-16-45-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-30-18---2021-01-01-02-40-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-40-17---2021-01-01-00-50-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-24-53---2021-01-01-08-34-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-04-53---2021-01-01-08-14-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-05-16---2021-01-01-14-15-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-30-18---2021-01-01-01-40-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-35-15---2021-01-01-11-45-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-25-15---2021-01-01-10-35-15.txt" />
+     <None Include="Assets\Resources\TotalCount.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-14-53---2021-01-01-07-24-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-40-18---2021-01-01-03-50-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-55-17---2021-01-01-22-05-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-45-16---2021-01-01-16-55-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-45-17---2021-01-01-21-55-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-54-53---2021-01-01-08-04-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-55-16---2021-01-01-13-05-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2020-12-31-23-58-29---2021-01-01-00-08-29.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-44-53---2021-01-01-07-54-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-35-16---2021-01-01-18-45-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-35-17---2021-01-01-20-45-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-35-16---2021-01-01-14-45-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-15-15---2021-01-01-09-25-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-04-53---2021-01-01-07-14-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-50-18---2021-01-01-03-00-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-35-16---2021-01-01-13-45-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-15-15---2021-01-01-12-25-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-34-53---2021-01-01-08-44-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-44-53---2021-01-01-06-54-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-05-16---2021-01-01-13-15-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-15-15---2021-01-01-10-25-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-35-17---2021-01-01-22-45-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-42-04---2021-01-01-04-52-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-35-15---2021-01-01-12-45-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-25-16---2021-01-01-16-35-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-10-18---2021-01-01-03-20-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-25-16---2021-01-01-17-35-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-44-53---2021-01-01-05-54-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-45-15---2021-01-01-09-55-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-01-34---2021-01-01-04-11-34.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-25-17---2021-01-01-20-35-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-05-15---2021-01-01-12-15-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-25-15---2021-01-01-09-35-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-25-17---2021-01-01-22-35-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-54-53---2021-01-01-06-04-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-50-18---2021-01-01-02-00-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-05-17---2021-01-01-21-15-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-25-16---2021-01-01-18-35-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-22-04---2021-01-01-05-32-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-32-04---2021-01-01-04-42-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-15-16---2021-01-01-16-25-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-24-53---2021-01-01-06-34-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-15-16---2021-01-01-15-25-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-55-15---2021-01-01-09-05-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-55-16---2021-01-01-14-05-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-00-18---2021-01-01-03-10-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-15-16---2021-01-01-19-25-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-45-15---2021-01-01-08-55-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-35-15---2021-01-01-10-45-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-45-15---2021-01-01-10-55-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-55-17---2021-01-01-20-05-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-50-18---2021-01-01-04-00-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-55-15---2021-01-01-10-05-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-15-16---2021-01-01-14-25-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-45-16---2021-01-01-18-55-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-25-16---2021-01-01-19-35-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-45-17---2021-01-01-22-55-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-50-18---2021-01-01-01-00-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-19-18---2021-01-01-00-29-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-35-16---2021-01-01-17-45-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-30-18---2021-01-01-03-40-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-05-16---2021-01-01-15-15-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-24-53---2021-01-01-07-34-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-12-04---2021-01-01-04-22-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-54-53---2021-01-01-07-04-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-15-16---2021-01-01-17-25-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-20-18---2021-01-01-01-30-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-05-15---2021-01-01-09-15-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-05-16---2021-01-01-16-15-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-05-16---2021-01-01-17-15-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-25-16---2021-01-01-14-35-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-07-34-53---2021-01-01-07-44-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-25-17---2021-01-01-21-35-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-55-16---2021-01-01-16-05-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-45-16---2021-01-01-15-55-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-00-18---2021-01-01-01-10-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-55-16---2021-01-01-18-05-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-25-16---2021-01-01-15-35-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-15-17---2021-01-01-21-25-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-55-17---2021-01-01-21-05-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-25-15---2021-01-01-12-35-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-09-18---2021-01-01-00-19-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-23-05-17---2021-01-01-23-15-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-10-18---2021-01-01-01-20-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-12-45-15---2021-01-01-12-55-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-45-16---2021-01-01-19-55-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-45-16---2021-01-01-13-55-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-34-53---2021-01-01-06-44-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-45-15---2021-01-01-11-55-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-45-16---2021-01-01-14-55-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-15-16---2021-01-01-13-25-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-00-30-17---2021-01-01-00-40-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-55-15---2021-01-01-12-05-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-23-15-17---2021-01-01-23-25-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-35-16---2021-01-01-19-45-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-05-15---2021-01-01-10-15-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-05-16---2021-01-01-18-15-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-05-17---2021-01-01-22-15-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-15-17---2021-01-01-22-25-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-12-04---2021-01-01-05-22-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-04-53---2021-01-01-06-14-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-10-55-15---2021-01-01-11-05-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-15-17---2021-01-01-20-25-17.txt" />
+     <None Include="Assets\P_Assets\Poly City - Free Cartoon Pack\Readme.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-10-18---2021-01-01-02-20-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-45-17---2021-01-01-20-55-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-40-18---2021-01-01-02-50-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-14-55-16---2021-01-01-15-05-16.txt" />
+     <None Include="Assets\Data\thuduc_15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-01-40-18---2021-01-01-01-50-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-02-04---2021-01-01-05-12-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-05-15---2021-01-01-11-15-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-15-15---2021-01-01-11-25-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-20-18---2021-01-01-02-30-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-16-55-16---2021-01-01-17-05-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-11-25-15---2021-01-01-11-35-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-05-34-07---2021-01-01-05-44-07.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-03-20-18---2021-01-01-03-30-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-13-25-16---2021-01-01-13-35-16.txt" />
+     <None Include="Assets\Resources\actors.xml" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-22-04---2021-01-01-04-32-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-21-35-17---2021-01-01-21-45-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-06-14-53---2021-01-01-06-24-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-15-16---2021-01-01-18-25-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-02-00-18---2021-01-01-02-10-18.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-19-05-16---2021-01-01-19-15-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-18-55-16---2021-01-01-19-05-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-09-35-15---2021-01-01-09-45-15.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-08-14-53---2021-01-01-08-24-53.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-22-55-17---2021-01-01-23-05-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-04-52-04---2021-01-01-05-02-04.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-20-05-17---2021-01-01-20-15-17.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-17-45-16---2021-01-01-17-55-16.txt" />
+     <None Include="Assets\Resources\Cam-45\01-01-2021\2021-01-01-15-35-16---2021-01-01-15-45-16.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.5f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
@@ -408,12 +406,6 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.5f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.5f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -797,9 +789,9 @@
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

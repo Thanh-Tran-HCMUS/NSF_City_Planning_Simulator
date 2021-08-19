@@ -12,6 +12,7 @@ public enum Execution {
 /// The class is responsible for creating vehicles and finding the shortest route
 /// </summary>
 public class PathFinder : MonoBehaviour {
+    public List<GameObject> carPrefab;
     private static PathFinder _instance;////usunąc?
     public static PathFinder Instance => _instance;
 
@@ -191,8 +192,19 @@ public class PathFinder : MonoBehaviour {
         if (!carsBox) {
             carsBox = (new GameObject("Cars")).transform;
         }
-        GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        go.transform.localScale = new Vector3(0.4f, 0.4f, 0.8f);
+        int random = Random.Range(0, 8);
+        GameObject go = GameObject.Instantiate(carPrefab[random]);
+
+        if (random == 0)
+        {
+            go.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else
+        {
+            go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        }
+        // GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //go.transform.localScale = new Vector3(0.4f, 0.4f, 0.8f);
         go.transform.parent = carsBox;
         cars.Add(go.transform);
         PathFollower follower = go.AddComponent<PathFollower>();
