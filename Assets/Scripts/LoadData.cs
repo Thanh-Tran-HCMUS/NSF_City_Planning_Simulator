@@ -6,19 +6,47 @@ using UnityEngine;
 
 public class LoadData : MonoBehaviour
 {
-    public Street street;
-    public Street streetleaving;
+    //public Street street;
+    //public Street streetleaving;
     List<List<int>> dataLines = new List<List<int>>();
+    PathFinder pathFinder;
+    public GameObject pathFinderObj;
     // Start is called before the first frame update
     void Start()
     {
+        pathFinder = pathFinderObj.GetComponent<PathFinder>();
         readfile();
-        printData();
+        //printData();
         importData();
+    }
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.B))
+        {
+            foreach (Street b in pathFinder.graphData.allStreets)
+            {
+                if (b.Name == "hvt1")
+                {
+                    Debug.Log(b.center.ID);
+                }
+            }
+            //foreach (Node a in graphData.centers)
+            //{
+            //    Debug.Log(a.pathDistance + "   :    " + a.ID);
+
+            //}
+            // SpawnRealtime(13);
+        }
     }
     void importData()
     {
-        street.spawns[0] = dataLines[0][2];
+        StartCoroutine(pathFinder.Spawn(dataLines[0][0], "hvt", "hvt2", 0));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][1], "hvt", "hvt2", 1));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][2], "hvt", "hvt2", 2));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][3], "hvt", "hvt2", 3));
+
+        // pathFinder.spawCarInStreet("hvt", "hvt2", 0);
+        // street.spawns[0] = dataLines[0][2];
     }
     private void readfile()
     {
