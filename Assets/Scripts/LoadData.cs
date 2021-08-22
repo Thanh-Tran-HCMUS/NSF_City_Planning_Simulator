@@ -17,7 +17,7 @@ public class LoadData : MonoBehaviour
         pathFinder = pathFinderObj.GetComponent<PathFinder>();
         readfile();
         //printData();
-        importData();
+        StartCoroutine(importData());
     }
     private void Update()
     {
@@ -38,12 +38,13 @@ public class LoadData : MonoBehaviour
             // SpawnRealtime(13);
         }
     }
-    void importData()
+    IEnumerator importData()
     {
-        StartCoroutine(pathFinder.Spawn(dataLines[0][0], "hvt", "hvt2", 0));
-        StartCoroutine(pathFinder.Spawn(dataLines[0][1], "hvt", "hvt2", 1));
-        StartCoroutine(pathFinder.Spawn(dataLines[0][2], "hvt", "hvt2", 2));
-        StartCoroutine(pathFinder.Spawn(dataLines[0][3], "hvt", "hvt2", 3));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][0], "hvt", "hvt1", 0));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][1], "hvt", "hvt2", 1)); 
+        StartCoroutine(pathFinder.Spawn(dataLines[0][2], "hvt", 2));
+        yield return new WaitForSeconds(6);
+        StartCoroutine(pathFinder.Spawn(dataLines[0][3], "hvt", 3));
 
         // pathFinder.spawCarInStreet("hvt", "hvt2", 0);
         // street.spawns[0] = dataLines[0][2];

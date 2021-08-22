@@ -308,6 +308,69 @@ public class PathFinder : MonoBehaviour
             }
             else
             {
+                delay = 15f;
+            }
+            yield return new WaitForSeconds(delay);
+        }
+    }
+    public  IEnumerator delaySpawn(float time)
+    {
+        yield return new WaitForSeconds(time);
+    }
+    private int getIDFromStreet(string streetName)
+    {
+        int a = 0;
+        foreach (Street str in graphData.allStreets)
+        {
+            if (streetName == str.Name)
+            {
+                a = str.center.ID;
+                break;
+            }
+        }
+        return a;
+    }
+    private string getStreetFromID(int id)
+    {
+        string tmp="";
+        foreach(Street str in graphData.allStreets)
+        {
+            if(id == str.center.ID)
+            {
+                tmp = str.Name;
+            }
+        }
+        return tmp;
+    }
+    public IEnumerator Spawn(int numberCar, string street1, int idCar)
+    {
+        int i = 0;
+        float delay = 0f;
+        int idStreet1 = getIDFromStreet(street1);
+        int idStreet2 = idStreet1;
+        while (idStreet2 == idStreet1)
+        {
+            idStreet2 = Random.Range(0, graphData.centers.Count);
+        }
+        while (i < numberCar)
+        {
+            spawCarInStreet(street1, idStreet2, idCar);
+            amount++;
+            i++;
+            if (idCar == 0)
+            {
+                delay = 4f;
+            }
+            else if (idCar == 1)
+            {
+                delay = 5f;
+            }
+            else if (idCar == 2)
+            {
+                delay = 8f;
+            }
+            else
+            {
                 delay = 10f;
             }
             yield return new WaitForSeconds(delay);
@@ -673,11 +736,29 @@ public class PathFinder : MonoBehaviour
         PathFollower follower = go.AddComponent<PathFollower>();
         return follower;
     }
+   
+    public void spawCarInStreet(string street1, string street2, int idCar)
+    {
+        int a = getIDFromStreet(street1);
+        int b = getIDFromStreet(street2);
+        PathFollower follower = SpawnCarRealtime(idCar);
+        List<Path> paths = AddRealtimePath(a, b);
+        follower.Follow(paths);
+    }
+    public void spawCarInStreet(string street1, int idStreet2, int idCar)
+    {
+        int a = getIDFromStreet(street1);
+
+        PathFollower follower = SpawnCarRealtime(idCar);
+        List<Path> paths = AddRealtimePath(a, idStreet2);
+        follower.Follow(paths);
+    }
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            foreach(Street b in graphData.allStreets)
+            foreach (Street b in graphData.allStreets)
             {
                 if (b.Name == "hvt1")
                 {
@@ -691,34 +772,5 @@ public class PathFinder : MonoBehaviour
             //}
             // SpawnRealtime(13);
         }
-    }
-    public void spawCarInStreet(string street1, string street2, int idCar)
-    {
-        int a = 0, b = 0;
-        bool checkA = false, checkB = false;
-        foreach(Street str in graphData.allStreets)
-        {
-            if (str.Name == street1)
-            {
-                a = str.center.ID;
-                checkA = true;
-            }
-            else if (str.Name == street2)
-            {
-                b = str.center.ID;
-                checkB = true;
-            }
-        }
-        if (checkA == false)
-        {
-            Debug.LogWarning(street1 + " not found");
-        }
-        if (checkB == false)
-        {
-            Debug.LogWarning(street2 + " not found");
-        }
-        PathFollower follower = SpawnCarRealtime(idCar);
-        List<Path> paths = AddRealtimePath(a, b);
-        follower.Follow(paths);
     }
 }
