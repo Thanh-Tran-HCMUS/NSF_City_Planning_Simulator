@@ -17,3 +17,7 @@
 - [x] Integration of the vehicle location section into the map of Mohit
 - [x] Creating random vehicles on the street
 - [x] Creating vehicles on the street from file data
+- [x] Create a map of District 1 (Top-Left: 10.78053, 106.6938; Bottom-Right: 10.7708, 106.7064)
+- [x] Add some other buildings: Bitexco, Parkson Saigon Tourist Plaza, Saigon Central Post Office, Majestic Hotel, etc
+- [x] Create a map below the model of Thu Duc City
+- [ ] Edit model location on map of Thu Duc City (@Mohit please help me fix it)
