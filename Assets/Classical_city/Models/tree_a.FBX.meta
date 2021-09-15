@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 09535b58beb28e64d9f264d728013694
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bark A
+    100002: Bark B
+    100004: Bark C
+    100006: Bark D
+    100008: Bark E
+    100010: Bush
+    100012: Grass A
+    100014: Grass B
+    100016: Grass C
+    100018: Leaf A
+    100020: Leaf B
+    100022: Leaf C
+    100024: Leaf D
+    100026: Leaf E
+    100028: //RootNode
+    400000: Bark A
+    400002: Bark B
+    400004: Bark C
+    400006: Bark D
+    400008: Bark E
+    400010: Bush
+    400012: Grass A
+    400014: Grass B
+    400016: Grass C
+    400018: Leaf A
+    400020: Leaf B
+    400022: Leaf C
+    400024: Leaf D
+    400026: Leaf E
+    400028: //RootNode
+    2100000: 'Material #452'
+    2100002: 'Material #451'
+    2300000: Bark A
+    2300002: Bark B
+    2300004: Bark C
+    2300006: Bark D
+    2300008: Bark E
+    2300010: Bush
+    2300012: Grass A
+    2300014: Grass B
+    2300016: Grass C
+    2300018: Leaf A
+    2300020: Leaf B
+    2300022: Leaf C
+    2300024: Leaf D
+    2300026: Leaf E
+    3300000: Bark A
+    3300002: Bark B
+    3300004: Bark C
+    3300006: Bark D
+    3300008: Bark E
+    3300010: Bush
+    3300012: Grass A
+    3300014: Grass B
+    3300016: Grass C
+    3300018: Leaf A
+    3300020: Leaf B
+    3300022: Leaf C
+    3300024: Leaf D
+    3300026: Leaf E
+    4300000: Leaf B
+    4300002: Leaf A
+    4300004: Leaf E
+    4300006: Leaf C
+    4300008: Leaf D
+    4300010: Grass B
+    4300012: Grass A
+    4300014: Grass C
+    4300016: Bark C
+    4300018: Bark A
+    4300020: Bark B
+    4300022: Bark D
+    4300024: Bark E
+    4300026: Bush
+    6400000: Bark A
+    6400002: Bark B
+    6400004: Bark C
+    6400006: Bark D
+    6400008: Bark E
+    6400010: Bush
+    6400012: Grass A
+    6400014: Grass B
+    6400016: Grass C
+    6400018: Leaf A
+    6400020: Leaf B
+    6400022: Leaf C
+    6400024: Leaf D
+    6400026: Leaf E
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #451'
+    second: {fileID: 2100000, guid: 1d9b155eac94dd742a5debbcc9bf0c78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #452'
+    second: {fileID: 2100000, guid: 48e49feac70d3714d827dcccf5c2c78f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 58
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

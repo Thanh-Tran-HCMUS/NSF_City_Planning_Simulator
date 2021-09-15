@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: ba3c67a6143a59847903f62b0231a507
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Cone
+    100002: Dumpstar
+    100004: Electric Box
+    100006: Fire Hydrant
+    100008: Mailbox
+    100010: News Box
+    100012: News Paper
+    100014: //RootNode
+    100016: Road Block A
+    100018: Road Block B
+    100020: Round Cone
+    100022: Trash
+    100024: Trash Bin
+    400000: Cone
+    400002: Dumpstar
+    400004: Electric Box
+    400006: Fire Hydrant
+    400008: Mailbox
+    400010: News Box
+    400012: News Paper
+    400014: //RootNode
+    400016: Road Block A
+    400018: Road Block B
+    400020: Round Cone
+    400022: Trash
+    400024: Trash Bin
+    2100000: 'Material #221'
+    2300000: Cone
+    2300002: Dumpstar
+    2300004: Electric Box
+    2300006: Fire Hydrant
+    2300008: Mailbox
+    2300010: News Box
+    2300012: News Paper
+    2300014: Road Block A
+    2300016: Road Block B
+    2300018: Round Cone
+    2300020: Trash
+    2300022: Trash Bin
+    3300000: Cone
+    3300002: Dumpstar
+    3300004: Electric Box
+    3300006: Fire Hydrant
+    3300008: Mailbox
+    3300010: News Box
+    3300012: News Paper
+    3300014: Road Block A
+    3300016: Road Block B
+    3300018: Round Cone
+    3300020: Trash
+    3300022: Trash Bin
+    4300000: Trash
+    4300002: Dumpstar
+    4300004: Fire Hydrant
+    4300006: Mailbox
+    4300008: Road Block A
+    4300010: Electric Box
+    4300012: Road Block B
+    4300014: News Box
+    4300016: News Paper
+    4300018: Trash Bin
+    4300020: Cone
+    4300022: Round Cone
+    6400000: Cone
+    6400002: Dumpstar
+    6400004: Electric Box
+    6400006: Fire Hydrant
+    6400008: Mailbox
+    6400010: News Box
+    6400012: News Paper
+    6400014: Road Block A
+    6400016: Road Block B
+    6400018: Round Cone
+    6400020: Trash
+    6400022: Trash Bin
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #221'
+    second: {fileID: 2100000, guid: 89c1504ec0f429b4291be1d6886dcc83, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 1
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 58
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
