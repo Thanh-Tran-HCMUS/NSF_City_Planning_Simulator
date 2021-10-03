@@ -21,3 +21,4 @@
 - [x] Add some other buildings: Bitexco, Parkson Saigon Tourist Plaza, Saigon Central Post Office, Majestic Hotel, etc
 - [x] Create a map below the model of Thu Duc City
 - [ ] Edit model location on map of Thu Duc City (@Mohit please help me fix it)
+- [x] Build the Thu Duc City road system
