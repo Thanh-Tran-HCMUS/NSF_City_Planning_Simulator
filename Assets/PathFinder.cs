@@ -667,20 +667,21 @@ public class PathFinder : MonoBehaviour
             Node spawn = graphData.centers[a];
             Node target = graphData.centers[b];
 
-            nodes = FindShortedPathSynchronousInternal(spawn.ID, target.ID);
+            nodes = FindShortedPathSynchronousInternal(a, target.ID);
         }
         List<Path> path = NodesToPath(nodes);
         return path;
     }
     List<Path> AddRealtimePath(int a, int b)
     {
+       
         List<Node> nodes = null;
         while (nodes == null || nodes.Count == 0)
         {
-            Node spawn = graphData.centers[a];
-            Node target = graphData.centers[b];
-
-            nodes = FindShortedPathSynchronousInternal(spawn.ID, target.ID);
+            //Node spawn = graphData.centers[a];
+            //Node target = graphData.centers[b];
+            nodes = FindShortedPathSynchronousInternal(a, b);
+            Debug.Log(nodes.Count);
         }
         List<Path> path = NodesToPath(nodes);
         return path;
@@ -741,6 +742,7 @@ public class PathFinder : MonoBehaviour
     {
         int a = getIDFromStreet(street1);
         int b = getIDFromStreet(street2);
+        Debug.Log(a + "," + b);
         PathFollower follower = SpawnCarRealtime(idCar);
         List<Path> paths = AddRealtimePath(a, b);
         follower.Follow(paths);
@@ -753,24 +755,34 @@ public class PathFinder : MonoBehaviour
         List<Path> paths = AddRealtimePath(a, idStreet2);
         follower.Follow(paths);
     }
+    void getInListPath()
+    {
+       
+    }
 
     private void Update()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            foreach (Street b in graphData.allStreets)
-            {
-                if (b.Name == "hvt1")
-                {
-                    Debug.Log(b.center.ID);
-                }
-            }
-            //foreach (Node a in graphData.centers)
+            //foreach (Street b in graphData.allStreets)
             //{
-            //    Debug.Log(a.pathDistance + "   :    " + a.ID);
-
+            //    if (b.Name == "hvt1")
+            //    {
+            //        Debug.Log(b.center.ID);
+            //    }
             //}
+            foreach (Node a in graphData.centers)
+            {
+                Debug.Log(a.pathDistance + "   :    " + a.ID);
+
+            }
+            
             // SpawnRealtime(13);
+        }
+        if (Input.GetKey(KeyCode.B))
+        {
+            Debug.Log(graphData.centers[2624].ID);
+            Debug.Log(graphData.centers[896].ID);
         }
     }
 }

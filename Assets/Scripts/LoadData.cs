@@ -17,7 +17,7 @@ public class LoadData : MonoBehaviour
         pathFinder = pathFinderObj.GetComponent<PathFinder>();
         readfile();
         //printData();
-        StartCoroutine(importData());
+        StartCoroutine(importData("45.Duong14"));
     }
     private void Update()
     {
@@ -38,20 +38,20 @@ public class LoadData : MonoBehaviour
             // SpawnRealtime(13);
         }
     }
-    IEnumerator importData()
+    IEnumerator importData(string nameStr)
     {
-        StartCoroutine(pathFinder.Spawn(dataLines[0][0], "hvt", "hvt1", 0));
-        StartCoroutine(pathFinder.Spawn(dataLines[0][1], "hvt", "hvt2", 1)); 
-        StartCoroutine(pathFinder.Spawn(dataLines[0][2], "hvt", 2));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][0], nameStr, 0));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][1], nameStr, 1));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][2], nameStr, 2));
         yield return new WaitForSeconds(6);
-        StartCoroutine(pathFinder.Spawn(dataLines[0][3], "hvt", 3));
+        StartCoroutine(pathFinder.Spawn(dataLines[0][3], nameStr, 3));
 
         // pathFinder.spawCarInStreet("hvt", "hvt2", 0);
         // street.spawns[0] = dataLines[0][2];
     }
     private void readfile()
     {
-        string pathTxt = Application.dataPath + "/Data/thuduc_15.txt";
+        string pathTxt = Application.dataPath + "/Data/45.txt";
         List<string> fileLines = File.ReadAllLines(pathTxt).ToList();
         foreach(string line in fileLines)
         {
