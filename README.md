@@ -22,3 +22,17 @@
 - [x] Create a map below the model of Thu Duc City
 - [ ] Edit model location on map of Thu Duc City (@Mohit please help me fix it)
 - [x] Build the Thu Duc City road system
+
+## Street names and coordinates
+
+| Data | Coordinates| The name of the street in the program|
+|:----:| :----: | :---- |
+|45| 10.8620000000 106.7723770000 |45.Duong14|
+|52| 10.8630000000 106.7697750000 |52.GanDuong13|
+|56| 10.8660000000 106.7631840000 |56.DauDuong13|
+|68| 10.8700484369 106.7659628391 |68.DuongE|
+|71| 10.8710335825 106.7642515898 |71.PhamVanDong|
+|72| 10.8623554975 106.7725302279 |72.14Giao13|
+|74| 10.8690000000 106.7704090000 |74.DuongSo2|
+
+_The remaining data has no coordinates to deploy_
