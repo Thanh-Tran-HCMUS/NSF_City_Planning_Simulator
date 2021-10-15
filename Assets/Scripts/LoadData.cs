@@ -111,25 +111,28 @@ public class LoadData : MonoBehaviour
     }
     IEnumerator dataSpawn(TextFiles textfiles)
     {
-       for(int i = 0; i < 120; i++)
+        while (true)
         {
-            for(int j = 0; j < textfiles.Count; j++)
+            for (int i = 0; i < 120; i++)
             {
-                string nameStr = NameStreet(j);
-                StartCoroutine(pathFinder.Spawn(textfiles[j][i][0], nameStr, 0));
-                StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
-                StartCoroutine(pathFinder.Spawn(textfiles[j][i][2], nameStr, 2));
-                StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
-                //Debug.Log(NameStreet(j));
-                //Debug.Log("textfiles[" + j + "][" + i + "][0]: " + textfiles[j][i][0]);
-                //Debug.Log("textfiles[" + j + "][" + i + "][1]: " + textfiles[j][i][1]);
-                //Debug.Log("textfiles[" + j + "][" + i + "][2]: " + textfiles[j][i][2]);
-                //Debug.Log("textfiles[" + j + "][" + i + "][3]: " + textfiles[j][i][3]);
+                for (int j = 0; j < textfiles.Count; j++)
+                {
+                    string nameStr = NameStreet(j);
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][0], nameStr, 0));
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][2], nameStr, 2));
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
+                    //Debug.Log(NameStreet(j));
+                    //Debug.Log("textfiles[" + j + "][" + i + "][0]: " + textfiles[j][i][0]);
+                    //Debug.Log("textfiles[" + j + "][" + i + "][1]: " + textfiles[j][i][1]);
+                    //Debug.Log("textfiles[" + j + "][" + i + "][2]: " + textfiles[j][i][2]);
+                    //Debug.Log("textfiles[" + j + "][" + i + "][3]: " + textfiles[j][i][3]);
+                }
+                Debug.Log("Batdaudoi");
+                yield return new WaitForSeconds(60);
+                Debug.Log("Doixong");
             }
-            Debug.Log("Batdaudoi");
-            yield return new WaitForSeconds(60);
-            Debug.Log("Doixong");
-        }      
+        }  
     }
    
     string NameStreet(int i)
