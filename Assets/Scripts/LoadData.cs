@@ -119,9 +119,13 @@ public class LoadData : MonoBehaviour
                 {
                     string nameStr = NameStreet(j);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][0], nameStr, 0));
+                    yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
+                    yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][2], nameStr, 2));
+                    yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
+                    yield return new WaitForSeconds(1);
                     //Debug.Log(NameStreet(j));
                     //Debug.Log("textfiles[" + j + "][" + i + "][0]: " + textfiles[j][i][0]);
                     //Debug.Log("textfiles[" + j + "][" + i + "][1]: " + textfiles[j][i][1]);
