@@ -42,11 +42,20 @@ public class LoadData : MonoBehaviour
     List<List<List<int>>> dataList = new List<List<List<int>>>();
     PathFinder pathFinder;
     public GameObject pathFinderObj;
+    public bool District1 = false;
     // Start is called before the first frame update
     void Start()
     {
         pathFinder = pathFinderObj.GetComponent<PathFinder>();
-        string myPath = Application.dataPath + "/Data/";
+        string myPath = "";
+        if (District1 == false)
+        {
+            myPath = Application.dataPath + "/Data/ThuDuc/";
+        }
+        else
+        {
+            myPath = Application.dataPath + "/Data/District1/";
+        }
         var files = new TextFiles(myPath);
         StartCoroutine(dataSpawn(files));
         //Debug.Log("data ne: " + files[0][1][1]);
@@ -117,7 +126,14 @@ public class LoadData : MonoBehaviour
             {
                 for (int j = 0; j < textfiles.Count; j++)
                 {
-                    string nameStr = NameStreet(j);
+                    string nameStr = "";
+                    if (District1 == false) {
+                        nameStr = NameStreet(j);
+                    }
+                    else
+                    {
+                        nameStr = NameStreetDistrict1(j);
+                    }
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][0], nameStr, 0));
                     yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
@@ -164,6 +180,26 @@ public class LoadData : MonoBehaviour
                 break;
             case 6:
                 name = "74.DuongSo2";
+                break;
+        }
+        return name;
+    }
+    string NameStreetDistrict1(int i)
+    {
+        string name = "";
+        switch (i)
+        {
+            case 0:
+                name = "96.LD_CXPR";
+                break;
+            case 1:
+                name = "97.GanNguyenDu";
+                break;
+            case 2:
+                name = "99.LTT_NH";
+                break;
+            case 3:
+                name = "102.VongXoay";
                 break;
         }
         return name;
