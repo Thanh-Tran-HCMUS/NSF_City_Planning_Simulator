@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Values : Collection<int>
 {
@@ -36,31 +37,49 @@ public class TextFiles : Collection<TextFile>
 }
 public class LoadData : MonoBehaviour
 {
-    //public Street street;
-    //public Street streetleaving;
     List<List<int>> dataLines = new List<List<int>>();
     List<List<List<int>>> dataList = new List<List<List<int>>>();
     PathFinder pathFinder;
     public GameObject pathFinderObj;
-    public bool District1 = false;
+    public enum ListCity { District1, ThuDuc};
+    public ListCity City;
+    private string[] txtFileName;
     // Start is called before the first frame update
     void Start()
     {
         pathFinder = pathFinderObj.GetComponent<PathFinder>();
-        string myPath = "";
-        if (District1 == false)
-        {
-            myPath = Application.dataPath + "/Data/ThuDuc/";
-        }
-        else
-        {
-            myPath = Application.dataPath + "/Data/District1/";
-        }
+        string myPath = Application.dataPath + "/Data/"+get_City()+"/";
+        Debug.Log(myPath);
         var files = new TextFiles(myPath);
+        listFileTxt(myPath);
         StartCoroutine(dataSpawn(files));
-        //Debug.Log("data ne: " + files[0][1][1]);
-        //Debug.Log(files.Count);
-        //StartCoroutine(importData("45.Duong14"));
+    }
+    private void listFileTxt(string myPath)
+    {
+        DirectoryInfo dir = new DirectoryInfo(myPath);
+        FileInfo[] info = dir.GetFiles("*.txt");
+        txtFileName = new string[info.Length];
+        Debug.Log(txtFileName.Length);
+        int i = 0;
+        foreach (FileInfo f in info)
+        {
+            txtFileName[i] = f.Name.Substring(0, f.Name.Length - f.Extension.Length);
+            i++;
+        }
+    }
+    private string get_City()
+    {
+        string name = "";
+        switch (City)
+        {
+            case ListCity.District1:
+                name = "District1";
+                break;
+            case ListCity.ThuDuc:
+                name = "ThuDuc";
+                break;
+        }
+        return name;
     }
     private void Update()
     {
@@ -73,50 +92,42 @@ public class LoadData : MonoBehaviour
                     Debug.Log(b.center.ID);
                 }
             }
-            //foreach (Node a in graphData.centers)
-            //{
-            //    Debug.Log(a.pathDistance + "   :    " + a.ID);
-
-            //}
-            // SpawnRealtime(13);
         }
         if (Input.GetKey(KeyCode.C))
         {
-            string myPath = Application.dataPath + "/Data/";
+            string myPath = Application.dataPath + "/Data/ThuDuc/";
             DirectoryInfo dir = new DirectoryInfo(myPath);
             FileInfo[] info = dir.GetFiles("*.txt");
+            txtFileName = new string[info.Length];
+            Debug.Log(txtFileName.Length);
+            int i = 0;
             foreach (FileInfo f in info)
             {
-                List<string> fileLines = File.ReadAllLines(myPath+f.Name).ToList(); 
-                foreach (string line in fileLines)
-                {
-                    ParseFile(line);
-                }
-                dataList.Add(dataLines);
-               // Debug.Log("DataLines count: "+dataLines.Count);
-                dataLines.RemoveRange(0,dataLines.Count);
-                //Debug.Log("Data Line Remove: " + dataLines.Count);
+                txtFileName[i] = f.Name.Substring(0, f.Name.Length - f.Extension.Length);
+                Debug.Log("name: " + f.Name.Substring(0,f.Name.Length-f.Extension.Length));
+                i++;
+               // List<string> fileLines = File.ReadAllLines(myPath+f.Name).ToList(); 
+               // foreach (string line in fileLines)
+               // {
+               //     ParseFile(line);
+               // }
+               // dataList.Add(dataLines);
+               //// Debug.Log("DataLines count: "+dataLines.Count);
+               // dataLines.RemoveRange(0,dataLines.Count);
+               // //Debug.Log("Data Line Remove: " + dataLines.Count);
+            }
+            for(int k = 0; k < txtFileName.Length; k++)
+            {
+                Debug.Log("txtfilenane: "+txtFileName[k]);
             }
         }
         if (Input.GetKey(KeyCode.O))
         {
-            string myPath = Application.dataPath + "/Data/";
-            var files = new TextFiles(myPath);
-            Debug.Log("data ne: "+files[0][1][1]);
-            Debug.Log(files.Count);
-
+            for (int k = 0; k < txtFileName.Length; k++)
+            {
+                Debug.Log("txtfilenane: " + txtFileName[k]);
+            }
         }
-    }
-    IEnumerator importData(string nameStr)
-    {
-        StartCoroutine(pathFinder.Spawn(dataLines[0][0], nameStr, 0));
-        StartCoroutine(pathFinder.Spawn(dataLines[0][1], nameStr, 1));
-        StartCoroutine(pathFinder.Spawn(dataLines[0][2], nameStr, 2));
-        yield return new WaitForSeconds(6);
-        StartCoroutine(pathFinder.Spawn(dataLines[0][3], nameStr, 3));
-
-        // pathFinder.spawCarInStreet("hvt", "hvt2", 0);
-        // street.spawns[0] = dataLines[0][2];
     }
     IEnumerator dataSpawn(TextFiles textfiles)
     {
@@ -126,14 +137,7 @@ public class LoadData : MonoBehaviour
             {
                 for (int j = 0; j < textfiles.Count; j++)
                 {
-                    string nameStr = "";
-                    if (District1 == false) {
-                        nameStr = NameStreet(j);
-                    }
-                    else
-                    {
-                        nameStr = NameStreetDistrict1(j);
-                    }
+                    string nameStr = txtFileName[j];
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][0], nameStr, 0));
                     yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
@@ -142,11 +146,6 @@ public class LoadData : MonoBehaviour
                     yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
                     yield return new WaitForSeconds(1);
-                    //Debug.Log(NameStreet(j));
-                    //Debug.Log("textfiles[" + j + "][" + i + "][0]: " + textfiles[j][i][0]);
-                    //Debug.Log("textfiles[" + j + "][" + i + "][1]: " + textfiles[j][i][1]);
-                    //Debug.Log("textfiles[" + j + "][" + i + "][2]: " + textfiles[j][i][2]);
-                    //Debug.Log("textfiles[" + j + "][" + i + "][3]: " + textfiles[j][i][3]);
                 }
                 Debug.Log("Batdaudoi");
                 yield return new WaitForSeconds(60);
@@ -155,55 +154,6 @@ public class LoadData : MonoBehaviour
         }  
     }
    
-    string NameStreet(int i)
-    {
-        string name = "";
-        switch(i)
-        {
-            case 0:
-                name = "45.Duong14";
-                break;
-            case 1:
-                name = "52.GanDuong13";
-                break;
-            case 2:
-                name = "56.DauDuong13";
-                break;
-            case 3:
-                name = "68.DuongE";
-                break;
-            case 4:
-                name = "71.PhamVanDong";
-                break;
-            case 5:
-                name = "72.14Giao13";
-                break;
-            case 6:
-                name = "74.DuongSo2";
-                break;
-        }
-        return name;
-    }
-    string NameStreetDistrict1(int i)
-    {
-        string name = "";
-        switch (i)
-        {
-            case 0:
-                name = "96.LD_CXPR";
-                break;
-            case 1:
-                name = "97.GanNguyenDu";
-                break;
-            case 2:
-                name = "99.LTT_NH";
-                break;
-            case 3:
-                name = "102.VongXoay";
-                break;
-        }
-        return name;
-    }
     void ParseFile(string path)
     {
         Debug.Log("parseFile");
@@ -220,13 +170,6 @@ public class LoadData : MonoBehaviour
     }
     void printData()
     {
-        //for(int i = 0; i < dataLines.Count; i++)
-        //{
-        //    for(int j = 0; j < dataLines[i].Count; j++)
-        //    {
-        //        Debug.Log(dataLines[i][j]);
-        //    }
-        //}
         Debug.Log(dataList.Count);
         for (int i = 0; i < dataList.Count; i++)
         {

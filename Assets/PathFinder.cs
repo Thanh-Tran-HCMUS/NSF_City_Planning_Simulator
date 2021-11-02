@@ -219,7 +219,7 @@ public class PathFinder : MonoBehaviour
         {
             carsBox = (new GameObject("Cars")).transform;
         }
-        int random = Random.Range(0, 8);
+        int random = Random.Range(0, 3);
         GameObject go = GameObject.Instantiate(carPrefab[random]);
 
         if (random == 0)
@@ -681,7 +681,7 @@ public class PathFinder : MonoBehaviour
             //Node spawn = graphData.centers[a];
             //Node target = graphData.centers[b];
             nodes = FindShortedPathSynchronousInternal(a, b);
-            Debug.Log(nodes.Count);
+            //Debug.Log(nodes.Count);
         }
         List<Path> path = NodesToPath(nodes);
         return path;
