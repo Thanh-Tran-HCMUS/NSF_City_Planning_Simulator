@@ -40,6 +40,8 @@
 |71| 10.8710335825 106.7642515898 |71|
 |72| 10.8623554975 106.7725302279 |72|
 |74| 10.8690000000 106.7704090000 |74|
+|79| 10.8626307662 106.7725865543 |79|
+|81| 10.8618405205 106.7722579837 |81|
 
 </details>
 
@@ -57,4 +59,4 @@
 
 </details>
 
-_Data are being updated_
+_The simulation has been completed after combining the data and the camera position on the simulated map area_
