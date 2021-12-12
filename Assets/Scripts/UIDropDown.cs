@@ -18,6 +18,7 @@ public class UIDropDown : MonoBehaviour
 
     void Start()
     {
+        Default();
         NewImage = allMap[0];
         MapImage.sprite = NewImage;
     }
