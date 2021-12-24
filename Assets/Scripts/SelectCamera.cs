@@ -55,8 +55,8 @@ public class SelectCamera : MonoBehaviour
     public void OpenExplorer()
     {
         //Application.OpenURL(@"C:\Users\kumav\Desktop\HCMC Cemetery\Assets\Resources\Cam-45");
-        path = EditorUtility.OpenFilePanel("Camera File .txt", "", "txt");
-        loadFile(path);
+        //path = EditorUtility.OpenFilePanel("Camera File .txt", "", "txt");
+        //loadFile(path);
         
     } 
 

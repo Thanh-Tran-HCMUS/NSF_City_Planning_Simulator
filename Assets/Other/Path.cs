@@ -148,7 +148,8 @@ public class Path {
             go.GetComponent<BoxCollider>().size = new Vector3(1.4f, 1f, 1f);
             transform = go.transform;
             transform.parent = Parent;
-            go.GetComponent<Renderer>().material = (Material)AssetDatabase.LoadAssetAtPath("Assets/QPathSimulation/Materials/street.mat", typeof(Material));
+            go.GetComponent<Renderer>().material = Resources.Load("street.mat", typeof(Material)) as Material;
+           //go.GetComponent<Renderer>().material = (Material)AssetDatabase.LoadAssetAtPath("Assets/QPathSimulation/Materials/street.mat", typeof(Material));
         }
         Visualize();
     }
