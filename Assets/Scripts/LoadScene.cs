@@ -12,7 +12,7 @@ public class LoadScene : MonoBehaviour
     }
     public void LoadSceneFromName(string name)
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadSceneAsync(name);
         Debug.Log("ClickLoadScene");
     }
     public void ClickLoadScene() {
