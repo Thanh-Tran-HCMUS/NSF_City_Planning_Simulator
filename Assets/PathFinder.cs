@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public enum Execution {
     Synchronous,
@@ -14,6 +15,7 @@ public enum Execution {
 public class PathFinder : MonoBehaviour
 {
     public List<GameObject> carPrefab;
+    public Slider speedSlider;
     private static PathFinder _instance;////usunąc?
     public static PathFinder Instance => _instance;
 
@@ -758,6 +760,10 @@ public class PathFinder : MonoBehaviour
     void getInListPath()
     {
        
+    }
+    public void speedChangeValue()
+    {
+        TimeScale = (int)speedSlider.value;
     }
 
     private void Update()

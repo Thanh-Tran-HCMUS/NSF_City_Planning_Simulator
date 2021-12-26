@@ -43,6 +43,7 @@ public class LoadData : MonoBehaviour
     public GameObject pathFinderObj;
     public enum ListCity { District1, ThuDuc};
     public ListCity City;
+    public Slider speedSlider;
     private string[] txtFileName;
     // Start is called before the first frame update
     void Start()
@@ -148,7 +149,8 @@ public class LoadData : MonoBehaviour
                     yield return new WaitForSeconds(1);
                 }
                 Debug.Log("Batdaudoi");
-                yield return new WaitForSeconds(60);
+                int waitTime = (int)(60 / speedSlider.value);
+                yield return new WaitForSeconds(waitTime);
                 Debug.Log("Doixong");
             }
         }  
