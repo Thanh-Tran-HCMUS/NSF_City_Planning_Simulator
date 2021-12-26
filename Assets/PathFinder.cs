@@ -701,8 +701,9 @@ public class PathFinder : MonoBehaviour
             carsBox = (new GameObject("Cars")).transform;
         }
         int random = Random.Range(0, 8);
-        GameObject go = GameObject.Instantiate(carPrefab[random]);
-
+        //GameObject go = GameObject.Instantiate(carPrefab[random]);
+        GameObject go = CarsPooling.sharedInstance.GetPooledObject(random);
+        if (go != null) go.SetActive(true);
         if (random == 0)
         {
             go.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -714,7 +715,7 @@ public class PathFinder : MonoBehaviour
         // GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
         //go.transform.localScale = new Vector3(0.4f, 0.4f, 0.8f);
         go.transform.parent = carsBox;
-        cars.Add(go.transform);
+        //cars.Add(go.transform);
         PathFollower follower = go.AddComponent<PathFollower>();
         return follower;
     }
@@ -724,8 +725,9 @@ public class PathFinder : MonoBehaviour
         {
             carsBox = (new GameObject("Cars")).transform;
         }
-        GameObject go = GameObject.Instantiate(carPrefab[idCar]);
-
+        //GameObject go = GameObject.Instantiate(carPrefab[idCar]);
+        GameObject go = CarsPooling.sharedInstance.GetPooledObject(idCar);
+        if (go != null) go.SetActive(true);
         if (idCar == 0)
         {
             go.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -735,7 +737,7 @@ public class PathFinder : MonoBehaviour
             go.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         }
         go.transform.parent = carsBox;
-        cars.Add(go.transform);
+        //cars.Add(go.transform);
         PathFollower follower = go.AddComponent<PathFollower>();
         return follower;
     }
@@ -768,6 +770,7 @@ public class PathFinder : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (Input.GetKey(KeyCode.A))
         {
             //foreach (Street b in graphData.allStreets)
@@ -789,6 +792,6 @@ public class PathFinder : MonoBehaviour
         {
             Debug.Log(graphData.centers[2624].ID);
             Debug.Log(graphData.centers[896].ID);
-        }
+        }*/
     }
 }

@@ -84,7 +84,7 @@ public class LoadData : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.B))
+        /*if (Input.GetKey(KeyCode.B))
         {
             foreach (Street b in pathFinder.graphData.allStreets)
             {
@@ -128,7 +128,7 @@ public class LoadData : MonoBehaviour
             {
                 Debug.Log("txtfilenane: " + txtFileName[k]);
             }
-        }
+        }*/
     }
     IEnumerator dataSpawn(TextFiles textfiles)
     {
@@ -142,11 +142,11 @@ public class LoadData : MonoBehaviour
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][0], nameStr, 0));
                     yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(1f);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][2], nameStr, 2));
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(1f);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(1f);
                 }
                 Debug.Log("Batdaudoi");
                 int waitTime = (int)(60 / speedSlider.value);

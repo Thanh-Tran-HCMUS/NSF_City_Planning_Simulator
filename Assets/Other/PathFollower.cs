@@ -29,6 +29,7 @@ public class PathFollower : MonoBehaviour {
             color = new Color(1f, 0f, 0f)
         };
         mesh.material = material;
+        StartCoroutine(countdownToDisable());
     }
     /// <summary>
     /// The method is responsible for assigning the travel route and its start
@@ -143,7 +144,8 @@ public class PathFollower : MonoBehaviour {
         }
         path[index].LeaveQueue();
         if (returningType == -1) {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         } else {
             mesh.enabled = false;
             yield return new WaitForSeconds(returningDelay);
@@ -160,5 +162,16 @@ public class PathFollower : MonoBehaviour {
     /// </summary>
     public void StopFollowing() { StopAllCoroutines(); }
 
+    IEnumerator countdownToDisable()
+    {
+        float duration = 60 / PathFinder.Instance.TimeScale;
+        float totalTime = 0f;
+        while (totalTime <= duration)
+        {
+            totalTime += Time.deltaTime;
+            yield return null;
+        }
+        gameObject.SetActive(false);
 
+    }
 }
