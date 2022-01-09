@@ -6,14 +6,14 @@ using UnityEngine.SceneManagement;
 public class HomeMenu : MonoBehaviour
 {
  
-    public void load_Thung_City()
+    public void load_ThuDucCity()
     {
-        SceneManager.LoadScene(1);   
+        SceneManager.LoadSceneAsync("ThuDucCity");   
     }
 
-    public void load_Central_City()
+    public void load_District1()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadSceneAsync("District1");
     }
     public void Quit()
     {
