@@ -143,10 +143,10 @@ public class LoadData : MonoBehaviour
                     yield return new WaitForSeconds(1);
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
                     yield return new WaitForSeconds(1f);
-                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][2], nameStr, 2));
-                    yield return new WaitForSeconds(1f);
-                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
-                    yield return new WaitForSeconds(1f);
+                    //StartCoroutine(pathFinder.Spawn(textfiles[j][i][2], nameStr, 2));
+                    //yield return new WaitForSeconds(1f);
+                    //StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
+                    //yield return new WaitForSeconds(1f);
                 }
                 Debug.Log("Batdaudoi");
                 int waitTime = (int)(60 / speedSlider.value);

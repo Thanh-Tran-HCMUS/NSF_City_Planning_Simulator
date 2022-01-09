@@ -23,12 +23,12 @@ public class PathFollower : MonoBehaviour {
     /// Method run when the object is created
     /// </summary>
     void Awake() {
-        mesh = GetComponent<MeshRenderer>();
-        mesh.enabled = false;
-        material = new Material(mesh.sharedMaterial) {
-            color = new Color(1f, 0f, 0f)
-        };
-        mesh.material = material;
+        //mesh = GetComponent<MeshRenderer>();
+        //mesh.enabled = false;
+        //material = new Material(mesh.sharedMaterial) {
+        //    color = new Color(1f, 0f, 0f)
+        //};
+        //mesh.material = material;
         StartCoroutine(countdownToDisable());
     }
     /// <summary>
@@ -57,7 +57,7 @@ public class PathFollower : MonoBehaviour {
             yield break;
         }
         int QueuePos;
-        Color[] gradient = { Color.white, Color.green, Color.blue, Color.red };
+        //Color[] gradient = { Color.white, Color.green, Color.blue, Color.red };
         int index = 0;
         int end = path.Count;
         float dist, dist1, colo = 0;
@@ -65,10 +65,10 @@ public class PathFollower : MonoBehaviour {
         transform.position = path[0].PosOfA;
         Vector3 dir = path[0].PosOfA - path[0].PosOfB;
         dir.Normalize();
-        while (path[index + 1].CanEnter(BlockType.Open) == false) {
-            yield return new WaitForSeconds(0.2f);
-        }
-        mesh.enabled = true;
+        //while (path[index + 1].CanEnter(BlockType.Open) == false) {
+        //    yield return new WaitForSeconds(0.1f);
+        //}
+        //mesh.enabled = true;
         index++;
         Vector3 target;
         float back;
@@ -136,10 +136,10 @@ public class PathFollower : MonoBehaviour {
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(target - transform.position), 100f * Time.deltaTime);
                 transform.position = transform.position + transform.forward * velocity * Time.deltaTime * 1;
             }
-            float waitingScale = waitingTime / 10;
-            int integer = Mathf.Clamp(Mathf.FloorToInt(waitingScale), 0, 2);
-            material.color = Color.Lerp(gradient[integer], gradient[integer + 1], waitingScale - integer);
-            mesh.material = material;
+            //float waitingScale = waitingTime / 10;
+            //int integer = Mathf.Clamp(Mathf.FloorToInt(waitingScale), 0, 2);
+            //material.color = Color.Lerp(gradient[integer], gradient[integer + 1], waitingScale - integer);
+            //mesh.material = material;
             yield return null;
         }
         path[index].LeaveQueue();
@@ -147,9 +147,9 @@ public class PathFollower : MonoBehaviour {
             //Destroy(gameObject);
             gameObject.SetActive(false);
         } else {
-            mesh.enabled = false;
+            //mesh.enabled = false;
             yield return new WaitForSeconds(returningDelay);
-            mesh.enabled = true;
+            //mesh.enabled = true;
             if (returningPath[0].street) {
                 returningPath[0].street.spawns[returningType]--;
             }
@@ -164,7 +164,7 @@ public class PathFollower : MonoBehaviour {
 
     IEnumerator countdownToDisable()
     {
-        float duration = 60 / PathFinder.Instance.TimeScale;
+        float duration = 120 / PathFinder.Instance.TimeScale;
         float totalTime = 0f;
         while (totalTime <= duration)
         {

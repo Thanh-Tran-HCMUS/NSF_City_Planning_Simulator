@@ -359,6 +359,7 @@ public class PathFinder : MonoBehaviour
             spawCarInStreet(street1, idStreet2, idCar);
             amount++;
             i++;
+            
             if (idCar == 0)
             {
                 delay = 4f;
@@ -376,6 +377,7 @@ public class PathFinder : MonoBehaviour
                 delay = 10f;
             }
             yield return new WaitForSeconds(delay);
+            //yield return new WaitForSeconds(1f);
         }
     }
     /// <summary>
@@ -716,7 +718,12 @@ public class PathFinder : MonoBehaviour
         //go.transform.localScale = new Vector3(0.4f, 0.4f, 0.8f);
         go.transform.parent = carsBox;
         //cars.Add(go.transform);
-        PathFollower follower = go.AddComponent<PathFollower>();
+        PathFollower follower;
+        if (go.GetComponent<PathFollower>() != null)
+        {
+            follower = go.GetComponent<PathFollower>();
+        }
+        else follower = go.AddComponent<PathFollower>();
         return follower;
     }
     PathFollower SpawnCarRealtime(int idCar)
@@ -738,7 +745,12 @@ public class PathFinder : MonoBehaviour
         }
         go.transform.parent = carsBox;
         //cars.Add(go.transform);
-        PathFollower follower = go.AddComponent<PathFollower>();
+        PathFollower follower;
+        if (go.GetComponent<PathFollower>() != null)
+        {
+            follower = go.GetComponent<PathFollower>();
+        }
+        else follower = go.AddComponent<PathFollower>();
         return follower;
     }
    

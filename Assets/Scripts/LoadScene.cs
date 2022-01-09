@@ -28,6 +28,7 @@ public class LoadScene : MonoBehaviour
     public void ClickOK()
     {
         menu.SetActive(false);
+        //SceneManager.UnloadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadSceneAsync(nameScene);
     }
     public void ClickCancel()
