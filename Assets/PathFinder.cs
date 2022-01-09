@@ -359,23 +359,23 @@ public class PathFinder : MonoBehaviour
             spawCarInStreet(street1, idStreet2, idCar);
             amount++;
             i++;
-            
-            if (idCar == 0)
-            {
-                delay = 4f;
-            }
-            else if (idCar == 1)
-            {
-                delay = 5f;
-            }
-            else if (idCar == 2)
-            {
-                delay = 8f;
-            }
-            else
-            {
-                delay = 10f;
-            }
+            delay = 60 / numberCar;
+            //if (idCar == 0)
+            //{
+            //    delay = 1f;
+            //}
+            //else if (idCar == 1)
+            //{
+            //    delay = 1f;
+            //}
+            //else if (idCar == 2)
+            //{
+            //    delay = 1f;
+            //}
+            //else
+            //{
+            //    delay = 1f;
+            //}
             yield return new WaitForSeconds(delay);
             //yield return new WaitForSeconds(1f);
         }
