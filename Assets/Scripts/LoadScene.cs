@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject menu;
+    private void Start()
     {
-        
+        menu.SetActive(false);
     }
+    // Start is called before the first frame update
+    string nameScene;
     public void LoadSceneFromName(string name)
     {
         SceneManager.LoadSceneAsync(name);
@@ -18,9 +20,18 @@ public class LoadScene : MonoBehaviour
     public void ClickLoadScene() {
         Debug.Log("ClickLoadScene");
     }
-    // Update is called once per frame
-    void Update()
+    public void ClickSymbol(string name)
     {
-        
+        nameScene = name;
+        menu.SetActive(true);
+    }
+    public void ClickOK()
+    {
+        menu.SetActive(false);
+        SceneManager.LoadSceneAsync(nameScene);
+    }
+    public void ClickCancel()
+    {
+        menu.SetActive(false);
     }
 }
