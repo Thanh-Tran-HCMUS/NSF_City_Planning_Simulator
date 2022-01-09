@@ -65,9 +65,9 @@ public class PathFollower : MonoBehaviour {
         transform.position = path[0].PosOfA;
         Vector3 dir = path[0].PosOfA - path[0].PosOfB;
         dir.Normalize();
-        //while (path[index + 1].CanEnter(BlockType.Open) == false) {
-        //    yield return new WaitForSeconds(0.1f);
-        //}
+        while (path[index + 1].CanEnter(BlockType.Open) == false) {
+            yield return new WaitForSeconds(0.1f);
+        }
         //mesh.enabled = true;
         index++;
         Vector3 target;
@@ -145,6 +145,7 @@ public class PathFollower : MonoBehaviour {
         path[index].LeaveQueue();
         if (returningType == -1) {
             //Destroy(gameObject);
+            gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
             gameObject.SetActive(false);
         } else {
             //mesh.enabled = false;
@@ -164,13 +165,14 @@ public class PathFollower : MonoBehaviour {
 
     IEnumerator countdownToDisable()
     {
-        float duration = 120 / PathFinder.Instance.TimeScale;
+        float duration = 60 / PathFinder.Instance.TimeScale;
         float totalTime = 0f;
         while (totalTime <= duration)
         {
             totalTime += Time.deltaTime;
             yield return null;
         }
+        gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
         gameObject.SetActive(false);
 
     }
