@@ -345,19 +345,92 @@ public class PathFinder : MonoBehaviour
         }
         return tmp;
     }
+
+    private int getNumStreetFromID(int id)
+    {
+        int i = 0;
+        foreach (Street str in graphData.allStreets)
+        {
+            if (id == str.center.ID)
+            {
+                return i;
+            }
+            i++;
+        }
+        return -1;
+    }
+
+    private Node getNodeFromID(int id)
+    {
+        Node tmp = null;
+        foreach (Street str in graphData.allStreets)
+        {
+            if (id == str.center.ID)
+            {
+                tmp = str.center;
+            }
+        }
+        return tmp;
+    }
+
     public IEnumerator Spawn(int numberCar, string street1, int idCar)
     {
         int i = 0;
         float delay = 0f;
+        int maxRangeNeighbor = 50;
         int idStreet1 = getIDFromStreet(street1);
-        int idStreet2 = idStreet1;
-        while (idStreet2 == idStreet1)
+        int numStreet1 = getNumStreetFromID(idStreet1);
+        int numStreet2 = numStreet1;
+        
+        if (numStreet1 >= 0)
         {
-            idStreet2 = Random.Range(0, graphData.centers.Count);
+            int RangeNeighbor = Random.Range(maxRangeNeighbor - 5, maxRangeNeighbor);
+            if (numStreet1 <= RangeNeighbor) numStreet2 = numStreet1 + RangeNeighbor;
+            else
+            {
+                if (numStreet1 >= graphData.allStreets.Count - RangeNeighbor) numStreet2 = numStreet1 - RangeNeighbor;
+                else numStreet2 = numStreet1 + RangeNeighbor;
+            }
         }
+        /*while (idStreet2 == idStreet1)
+        {
+            int t = Random.Range(0, graphData.centers.Count);
+            idStreet2 = graphData.centers[t].ID;
+            
+        }*/
+        // Tất cả các xe lẻ đi theo tuyến đường 1
+        // Tất cả các xe chẵn đi theo tuyến đường 2
+        int a1 = graphData.allStreets[numStreet1].center.ID;
+        int b1 = graphData.allStreets[numStreet2].center.ID;
+        List<Path> currentPaths1 = AddRealtimePath(a1, b1);
+        Debug.Log("Select street 1: " + a1 + " to " + b1);
+        numStreet1 = getNumStreetFromID(idStreet1);
+        numStreet2 = numStreet1;
+        if (numStreet1 >= 0)
+        {
+            int RangeNeighbor = Random.Range(maxRangeNeighbor - 8, maxRangeNeighbor - 3);
+            if (numStreet1 <= RangeNeighbor) numStreet2 = numStreet1 + RangeNeighbor;
+            else
+            {
+                if (numStreet1 >= graphData.allStreets.Count - RangeNeighbor) numStreet2 = numStreet1 - RangeNeighbor;
+                else numStreet2 = numStreet1 + RangeNeighbor;
+            }
+        }
+        int a2 = graphData.allStreets[numStreet1].center.ID;
+        int b2 = graphData.allStreets[numStreet2].center.ID;
+        List<Path> currentPaths2 = AddRealtimePath(a2, b2);
+        Debug.Log("Select street 2: " + a2 + " to " + b2);
         while (i < numberCar)
         {
-            spawCarInStreet(street1, idStreet2, idCar);
+            //spawCarInStreet(numStreet1, numStreet2, idCar);
+            
+            //Debug.Log(a + "," + b);
+            PathFollower follower = SpawnCarRealtime(idCar);
+            //List<Path> paths = AddRealtimePath(a, b);
+            if (i % 2 == 0)
+                follower.Follow(currentPaths1);
+            else
+                follower.Follow(currentPaths2);
             amount++;
             i++;
 
@@ -379,7 +452,7 @@ public class PathFinder : MonoBehaviour
             //{
             //    delay = 1f;
             //}
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(delay + 0.5f);
             //yield return new WaitForSeconds(1f);
         }
     }
@@ -392,7 +465,7 @@ public class PathFinder : MonoBehaviour
         {
             cars.RemoveAll(item => item == null);
             amount = cars.Count;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
         }
     }
     /// <summary>
@@ -660,6 +733,33 @@ public class PathFinder : MonoBehaviour
         return nearestNode != null ? nearestNode.ID : -1;
     }
 
+    public Node FindNearestNode2(Vector3 point, List<Node> currentNode)
+    {
+        float minDistance = float.MaxValue;
+        Node nearestNode = null;
+        bool stop = false;
+        foreach (var node in graphData.nodes)
+        {
+            stop = false;
+            if (node.position.Equals(point)) continue;
+            for(int i = 0; i < currentNode.Count; i++)
+            {
+                if (node.ID == currentNode[i].ID)
+                {
+                    stop = true;
+                    break;
+                }
+            }
+            if (stop) continue;
+            if (Vector3.Distance(node.position, point) < minDistance)
+            {
+                minDistance = Vector3.Distance(node.position, point);
+                nearestNode = node;
+            }
+        }
+        return nearestNode;
+    }
+
     //Custom
     List<Path> AddRealtimePath(int a)
     {
@@ -681,15 +781,61 @@ public class PathFinder : MonoBehaviour
     }
     List<Path> AddRealtimePath(int a, int b)
     {
-       
         List<Node> nodes = null;
+        /*int maxtarget = 4;
+        if (nodes == null || nodes.Count == 0)
+        {
+            Node spawn = graphData.centers[a];
+            Node start = spawn;
+            for (int i = 0; i < maxtarget; i++)
+            {
+                Node target = FindNearestNode2(start.position, nodes);
+                start = target;
+                nodes.Add(target);
+            }
+        }*/
+        /*StartCoroutine(FindShortestPathAsynchonousInternal(a, b, (callback) =>
+        {
+            nodes = callback;
+        }));
         while (nodes == null || nodes.Count == 0)
         {
-            //Node spawn = graphData.centers[a];
-            //Node target = graphData.centers[b];
+            continue;
+        }*/
+        while (nodes == null || nodes.Count == 0)
+        {
+        //Node spawn = graphData.centers[a];
+        //Node target = graphData.centers[b];
+        //StartCoroutine(FindShortestPathAsynchonousInternal(a, b, (callback) =>
+        //{
+        //    nodes = callback;
+        //}
+        //));
             nodes = FindShortedPathSynchronousInternal(a, b);
-            //Debug.Log(nodes.Count);
+        //Debug.Log(nodes.Count);
         }
+        Debug.Log(nodes.Count);
+        List<Path> path = NodesToPath(nodes);
+        return path;
+    }
+    List<Path> AddRealtimePath(Node spawn)
+    {
+        List<Node> nodes = new List<Node>();
+        
+        int maxtarget = 4;
+        if (nodes == null || nodes.Count == 0)
+        {
+            nodes.Add(spawn);
+            Node start = spawn;
+            for (int i = 0; i < maxtarget; i++)
+            {
+                Node target = FindNearestNode2(start.position, nodes);
+                start = target;
+                nodes.Add(target);
+            }
+        }
+        nodes.RemoveAt(0);
+        Debug.Log(nodes.Count);
         List<Path> path = NodesToPath(nodes);
         return path;
     }
@@ -708,7 +854,11 @@ public class PathFinder : MonoBehaviour
         int random = Random.Range(0, 8);
         //GameObject go = GameObject.Instantiate(carPrefab[random]);
         GameObject go = CarsPooling.sharedInstance.GetPooledObject(random);
-        if (go != null) go.SetActive(true);
+        if (go != null)
+        {
+            go.SetActive(true);
+           // go.GetComponent<PathFollower>().BeginCountToDisable();
+        }
         if (random == 0)
         {
             go.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -737,7 +887,11 @@ public class PathFinder : MonoBehaviour
         }
         //GameObject go = GameObject.Instantiate(carPrefab[idCar]);
         GameObject go = CarsPooling.sharedInstance.GetPooledObject(idCar);
-        if (go != null) go.SetActive(true);
+        if (go != null)
+        {
+            go.SetActive(true);
+            //go.GetComponent<PathFollower>().BeginCountToDisable();
+        }
         if (idCar == 0)
         {
             go.transform.localScale = new Vector3(1f, 1f, 1f);
@@ -766,12 +920,23 @@ public class PathFinder : MonoBehaviour
         List<Path> paths = AddRealtimePath(a, b);
         follower.Follow(paths);
     }
+    public void spawCarInStreet(int numstreet1, int numstreet2, int idCar)
+    {
+        int a = graphData.allStreets[numstreet1].center.ID;
+        int b = graphData.allStreets[numstreet2].center.ID;
+        Debug.Log(a + "," + b);
+        PathFollower follower = SpawnCarRealtime(idCar);
+        List<Path> paths = AddRealtimePath(a, b);
+        follower.Follow(paths);
+    }
     public void spawCarInStreet(string street1, int idStreet2, int idCar)
     {
         int a = getIDFromStreet(street1);
-
+        Node start = getNodeFromID(a);
         PathFollower follower = SpawnCarRealtime(idCar);
-        List<Path> paths = AddRealtimePath(a, idStreet2);
+        //List<Path> paths = AddRealtimePath(a, idStreet2);
+        //List<Path> paths = AddRealtimePath(start);
+        List<Path> paths = AddRealtimePath(a);
         follower.Follow(paths);
     }
     void getInListPath()

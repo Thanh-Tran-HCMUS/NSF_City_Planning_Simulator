@@ -29,7 +29,22 @@ public class PathFollower : MonoBehaviour {
         //    color = new Color(1f, 0f, 0f)
         //};
         //mesh.material = material;
+        //StartCoroutine(countdownToDisable());
+    }
+
+    public void BeginCountToDisable()
+    {
         StartCoroutine(countdownToDisable());
+    }
+
+    void OnEnable()
+    {
+        StartCoroutine(countdownToDisable());
+    }
+
+    private void Update()
+    {
+        
     }
     /// <summary>
     /// The method is responsible for assigning the travel route and its start
@@ -52,6 +67,7 @@ public class PathFollower : MonoBehaviour {
     /// </summary>
     /// <param name="path">List of paths making the route</param>
     IEnumerator FollowRoutine(List<Path> path) {
+        Debug.Log("follow path: " + path.Count);
         if (path == null || path.Count < 1) {
             Debug.Log("path empty");
             yield break;
@@ -66,7 +82,7 @@ public class PathFollower : MonoBehaviour {
         Vector3 dir = path[0].PosOfA - path[0].PosOfB;
         dir.Normalize();
         while (path[index + 1].CanEnter(BlockType.Open) == false) {
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
         }
         //mesh.enabled = true;
         index++;
@@ -165,7 +181,8 @@ public class PathFollower : MonoBehaviour {
 
     IEnumerator countdownToDisable()
     {
-        float duration = 60 / PathFinder.Instance.TimeScale;
+        //yield return null;
+        float duration = 1200 / PathFinder.Instance.TimeScale;
         float totalTime = 0f;
         while (totalTime <= duration)
         {

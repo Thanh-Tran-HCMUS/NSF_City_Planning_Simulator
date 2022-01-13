@@ -139,13 +139,13 @@ public class LoadData : MonoBehaviour
                 for (int j = 0; j < textfiles.Count; j++)
                 {
                     string nameStr = txtFileName[j];
-                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][0]/2, nameStr, 0));
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][0], nameStr, 0));
                     yield return new WaitForSeconds(1);
-                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][1]/2, nameStr, 1));
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][1], nameStr, 1));
                     yield return new WaitForSeconds(1f);
-                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][2]/2, nameStr, 2));
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][2], nameStr, 2));
                     yield return new WaitForSeconds(1f);
-                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][3]/2, nameStr, 3));
+                    StartCoroutine(pathFinder.Spawn(textfiles[j][i][3], nameStr, 3));
                     yield return new WaitForSeconds(15f);
                 }
                 Debug.Log("Batdaudoi");
