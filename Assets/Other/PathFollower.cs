@@ -81,9 +81,9 @@ public class PathFollower : MonoBehaviour {
         transform.position = path[0].PosOfA;
         Vector3 dir = path[0].PosOfA - path[0].PosOfB;
         dir.Normalize();
-        while (path[index + 1].CanEnter(BlockType.Open) == false) {
-            yield return new WaitForSeconds(0.2f);
-        }
+        //while (path[index + 1].CanEnter(BlockType.Open) == false) {
+        //    yield return new WaitForSeconds(0.2f);
+        //}
         //mesh.enabled = true;
         index++;
         Vector3 target;

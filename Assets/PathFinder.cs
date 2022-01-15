@@ -434,7 +434,7 @@ public class PathFinder : MonoBehaviour
             amount++;
             i++;
 
-            delay = 60f / (float)numberCar;
+            delay = 60f / (float)numberCar + 0.2f;
 
             //if (idCar == 0)
             //{
