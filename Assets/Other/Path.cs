@@ -161,6 +161,7 @@ public class Path {
         maxInQueue = (int)Mathf.Floor(Vector3.Distance(PosOfA, PosOfB) - 0.5f);
         maxInQueue = maxInQueue < 1 ? 1 : maxInQueue;
         maxInQueue = hide != HidePath.Shown && maxInQueue > 2 ? 2 : maxInQueue;
+        maxInQueue = 100;
         if (transform != null) {
             transform.position = (PosOfA + PosOfB) / 2f;
             transform.LookAt(PosOfB);

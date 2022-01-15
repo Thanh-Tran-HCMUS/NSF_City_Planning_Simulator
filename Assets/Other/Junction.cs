@@ -382,7 +382,8 @@ public class Junction : MonoBehaviour {
 
         timers = new float[phases.Length];
         for (int j = 0; j < phases.Length; j++) {
-            timers[j] = 5f;
+            timers[j] = 0f;
+            Debug.Log("ahihi");
         }
 
         foreach (Path p in paths) {
