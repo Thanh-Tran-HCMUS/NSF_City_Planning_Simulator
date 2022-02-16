@@ -1,0 +1,867 @@
+fileFormatVersion: 2
+guid: a4018fab43123064692f1eb84faa97ab
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 16
+    second: {fileID: 2100000, guid: fa4efbb5e5991464b9ad18ee2615d570, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontColor.001
+    second: {fileID: 2100000, guid: d59fcc0b5241cbb4499ed78643973e59, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3.001
+    second: {fileID: 2100000, guid: fcbd14bc085ce2143bc222adf94d66c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_10_.001
+    second: {fileID: 2100000, guid: a58d0709e3d29314ebfc074f0db0b27f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_11_.001
+    second: {fileID: 2100000, guid: 8f12e96181ed3294f991c3f651ca22ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_12_.001
+    second: {fileID: 2100000, guid: d3616cd49497ae040965cafb84bf56ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_13_.001
+    second: {fileID: 2100000, guid: 82f74ea039bbc4845b1c57813ad9df6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_14_.001
+    second: {fileID: 2100000, guid: 49ea6719130a69240a305aad419b062e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_1_.001
+    second: {fileID: 2100000, guid: 745f0826cb9720f449559f22246b1333, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_2_.001
+    second: {fileID: 2100000, guid: 4262899fb683c5d4ca810147b0844211, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_3_.001
+    second: {fileID: 2100000, guid: 79906fc50d35e2b4c90928aefcfb2a06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_4_.001
+    second: {fileID: 2100000, guid: 547fa8838ae7c634e8d5e292cd400e2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_5_.001
+    second: {fileID: 2100000, guid: ca025fada7660d04b81f021391113742, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_6_.001
+    second: {fileID: 2100000, guid: ea5df9fb19d45e1448405e4518e9de91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_7_.001
+    second: {fileID: 2100000, guid: 2dbdf28a4d40e0042b7fd672f76ed615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_8_.001
+    second: {fileID: 2100000, guid: aade5ccd17bc1b242ab58aa333b47f70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_3_9_.001
+    second: {fileID: 2100000, guid: fc66e8a30ddee4b42a85ec9b8bc62160, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje.001
+    second: {fileID: 2100000, guid: 067a6eaa19472dc428a39c89fe66f30e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje10_.001
+    second: {fileID: 2100000, guid: fb6dfdd9c0077c04382d262ff284ac39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje11_.001
+    second: {fileID: 2100000, guid: a405ee9586810714d927fe857cf53623, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje12_.001
+    second: {fileID: 2100000, guid: 5f638f0a19a45b448af15d0a59432b67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje13_.001
+    second: {fileID: 2100000, guid: 0c7d048b3e3074c418eaf15b5777911b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje14_.001
+    second: {fileID: 2100000, guid: fd1c78a10a17456479b4d7370a103d6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje15_.001
+    second: {fileID: 2100000, guid: f4b478739b40d524f8b6bbf05c71fd8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje16_.001
+    second: {fileID: 2100000, guid: 3fb94eaf71c385d4592178e92405c372, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje17_.001
+    second: {fileID: 2100000, guid: e9eb333a730d73d4abac051e97d5481b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje18_.001
+    second: {fileID: 2100000, guid: e45feb72a462cd14d8da0f0f275bf123, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje19_.001
+    second: {fileID: 2100000, guid: 85c2c2cc61fda0e4ea38f67f077acd49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje1_.001
+    second: {fileID: 2100000, guid: d25c0cfa838f30c478798f5177a06d27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje20_.001
+    second: {fileID: 2100000, guid: 5cdbac475dae97345befd9cb4cd0640b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje21_.001
+    second: {fileID: 2100000, guid: 12544f09fc62e46418e5e10e581167fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje22_.001
+    second: {fileID: 2100000, guid: 5a34372f34469bd4eb5c8178fbf68d1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje23_.001
+    second: {fileID: 2100000, guid: 876365e2550e7a64c8457453f1aa5bd8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje24_.001
+    second: {fileID: 2100000, guid: e5bb0992b6553a4479f43d026d30af20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje25_.001
+    second: {fileID: 2100000, guid: 5ec0327ceb611f949be919f7e778a894, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje26_.001
+    second: {fileID: 2100000, guid: 0ead514afe29d7247b356fb4f831b702, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje27_.001
+    second: {fileID: 2100000, guid: 2d50e8fcfa6225948840a057920166c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje28_.001
+    second: {fileID: 2100000, guid: d4019cad8b9c0d048b88a92a69d7ed55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje29_.001
+    second: {fileID: 2100000, guid: e5f93bc4f0a657840a56aeee7486ba84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje2_.001
+    second: {fileID: 2100000, guid: b37a08573a84dda46890e87bc9eea590, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje30_.001
+    second: {fileID: 2100000, guid: 314c5a26b731ab245b649910cbf524fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje31_.001
+    second: {fileID: 2100000, guid: b021219fe0a28b444b4a97113811aca1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje32_.001
+    second: {fileID: 2100000, guid: 95be6e89d5602154e8a1c23254a4e629, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje33_.001
+    second: {fileID: 2100000, guid: 2613edc83ed6ccb4cb93beee3c2e4c12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje34_.001
+    second: {fileID: 2100000, guid: d78ec2d7a728ac140bcfe3d302f7effa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje35_.001
+    second: {fileID: 2100000, guid: 7238646f05d30424ca7bbd483fdfcbe2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje36_.001
+    second: {fileID: 2100000, guid: ba2a4fb00dfd1f3429ed6a9e58713307, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje37_.001
+    second: {fileID: 2100000, guid: efb782a2b193b3b4ea02fd7f28a180c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje38_.001
+    second: {fileID: 2100000, guid: 63b3b48c85b4ec64f9575dd8e7c17051, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje3_.001
+    second: {fileID: 2100000, guid: 501d85b73ac76334ebc5d8004ad2d0bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje40_.001
+    second: {fileID: 2100000, guid: cc56d69843e35254cbc236770b8e48d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje41_.001
+    second: {fileID: 2100000, guid: 5dbe0b3a502ef2c42a78b647063c0d56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje42_.001
+    second: {fileID: 2100000, guid: 7572fb9bf772db6479ddfb2de4c2dcd0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje43_.001
+    second: {fileID: 2100000, guid: 7987da37280f05943883a27e67f92478, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje44_.001
+    second: {fileID: 2100000, guid: 5dcdee82afd20fc458a82532c498bc19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje45_.001
+    second: {fileID: 2100000, guid: 2bb2ea347a80bff4e8eec80744b4fd70, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje46_.001
+    second: {fileID: 2100000, guid: a68aee1adabcb374c8ce8ad27c5df643, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje47_.001
+    second: {fileID: 2100000, guid: 7cd4d86fa1403814caa5cc84aa22754e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje48_.001
+    second: {fileID: 2100000, guid: 6446c2d8960309343b343d05cb9fb64a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje49_.001
+    second: {fileID: 2100000, guid: f6b8a0ad13127024e929db72fe039f96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje4_.001
+    second: {fileID: 2100000, guid: 15da5478559fbfb40895a1fc0ad48df0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje50_.001
+    second: {fileID: 2100000, guid: f7fdcb4e4d8cfd64b812153ad06c8c3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje51_.001
+    second: {fileID: 2100000, guid: fbcb7e3b6cc6cb24cb8aa0def815fead, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje52_.001
+    second: {fileID: 2100000, guid: 08fd83f3c0fbd4f408f416a28d973c9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje53_.001
+    second: {fileID: 2100000, guid: 0a841868780ee3b4c80b7ba8ea78043d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje54_.001
+    second: {fileID: 2100000, guid: 8838a01941e74bf468405c66b91ab5cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje55_.001
+    second: {fileID: 2100000, guid: db5676dfc8572034eb5c3246699799cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje56_.001
+    second: {fileID: 2100000, guid: ba7451e80a73d054da43b4a3ac4e14b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje57_.001
+    second: {fileID: 2100000, guid: e467282bdb1332446b61b0e92a718e49, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje58_.001
+    second: {fileID: 2100000, guid: a7b032f7fcdc5434d8ef20b164a4f624, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje59_.001
+    second: {fileID: 2100000, guid: ee2eec75447fe904c94f5f240de2c79e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje5_.001
+    second: {fileID: 2100000, guid: 3c124379f0594f148abdb81762b59567, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje60_.001
+    second: {fileID: 2100000, guid: a92f1b296f1eac1429137d6511b85e3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje6_.001
+    second: {fileID: 2100000, guid: eb84cc2b37ed730429c333c6aadf9136, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje7_.001
+    second: {fileID: 2100000, guid: 800d6c1505950994a82d9dffe0929b0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje8_.001
+    second: {fileID: 2100000, guid: e1ec2fb48706aa54b94dd6fc6b7ef82a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Maje9_.001
+    second: {fileID: 2100000, guid: 63ca5157a4bdf764f95a607e824f846b, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3
+    second: {fileID: 2800000, guid: 3cbf6826c017ac34fa048bebfe9f5499, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_10_
+    second: {fileID: 2800000, guid: 63472c43a567a7a47acba7619776e869, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_11_
+    second: {fileID: 2800000, guid: 5f6ff69ace74bf744a2be7f4ca127d5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_12_
+    second: {fileID: 2800000, guid: 762eb36b85e2afd479a69a970173147f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_13_
+    second: {fileID: 2800000, guid: 1338ffc2378cbb24ea01aeb1682e3dea, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_14_
+    second: {fileID: 2800000, guid: 91a5c101fd641b34690ae3c3537539a5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_1_
+    second: {fileID: 2800000, guid: d21c4103b2612ef4e9079c320b51181d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_2_
+    second: {fileID: 2800000, guid: 78087d525e619544ab95e838ce8805d9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_3_
+    second: {fileID: 2800000, guid: 0ed73e1b450502f459c2e37869e2e253, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_4_
+    second: {fileID: 2800000, guid: cf659430d1a44cf4197233a668954aa2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_5_
+    second: {fileID: 2800000, guid: ed340032d4a849f43b1e8003fea0e7e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_6_
+    second: {fileID: 2800000, guid: 689b6de0fcd119246b33de101cf7bf41, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_7_
+    second: {fileID: 2800000, guid: 95c4b712771235949a63df7990c1df79, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_8_
+    second: {fileID: 2800000, guid: 6495c0797db45694ab3a80f13b4c2ae9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: M_3_9_
+    second: {fileID: 2800000, guid: bbad0d7b63978554abe5a16c5cca3dcf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje
+    second: {fileID: 2800000, guid: 28f64f6dd2366c14096a262ba63b45b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje10_
+    second: {fileID: 2800000, guid: 9d7533b7cdd763749a45eefb46fcfe8f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje11_
+    second: {fileID: 2800000, guid: 635ee37618cd197499a23785e166c24e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje12_
+    second: {fileID: 2800000, guid: e6015efbe1fa9654b83117315a3f4353, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje13_
+    second: {fileID: 2800000, guid: 2cd03e3340cfaed40b6d90fb6c6543ff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje14_
+    second: {fileID: 2800000, guid: 9f617159aec33d148b7f133f4329d3e1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje15_
+    second: {fileID: 2800000, guid: aaa060083b65b53448a1455901abe977, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje16_
+    second: {fileID: 2800000, guid: 77f6f13068d44d74aa961026e1349d66, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje17_
+    second: {fileID: 2800000, guid: c63d0153f740e9249998cbada18ba8fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje18_
+    second: {fileID: 2800000, guid: e937e64fe33b6fa4b8ce061a27ab9ed0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje19_
+    second: {fileID: 2800000, guid: 886d2681dd2d93c4ab6e5c4eb4455371, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje1_
+    second: {fileID: 2800000, guid: 0615b01e223323846b4ee807c05f6ef7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje20_
+    second: {fileID: 2800000, guid: 3466867d480f58d419d52ee91aaf5715, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje21_
+    second: {fileID: 2800000, guid: 8f6a4ce3ea530e843b2f175e36d15efc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje22_
+    second: {fileID: 2800000, guid: 0951d9ff49523ef4da67be8cd6a7a90b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje23_
+    second: {fileID: 2800000, guid: f855e8d269097e54d8753e816ae7d35f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje24_
+    second: {fileID: 2800000, guid: 06b63895baa32d9418fd55225249cd6a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje25_
+    second: {fileID: 2800000, guid: 1f1150cc07ae1824f9cb6cb8a70eb45e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje26_
+    second: {fileID: 2800000, guid: 8192230d9f6d23c4aa01d019b0b8546c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje27_
+    second: {fileID: 2800000, guid: e636e07c8cdf9784a8149db6d69fbe62, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje28_
+    second: {fileID: 2800000, guid: 6350fcac1de9cf146989bf7f2811e250, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje29_
+    second: {fileID: 2800000, guid: 6a7f5b0bca729e544be746a3f4f6a5bc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje2_
+    second: {fileID: 2800000, guid: 54ad58c0626ae5542ae63398193afba5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje30_
+    second: {fileID: 2800000, guid: fdb3e94e08e0f924986e66e5504c0688, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje31_
+    second: {fileID: 2800000, guid: 32d4d0c9a307dd3498962f699c0cc584, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje32_
+    second: {fileID: 2800000, guid: 31a47bfa3223ecf4e88134b250aa1366, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje33_
+    second: {fileID: 2800000, guid: 155f46b24e51cfe4bbbd4918004024ae, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje34_
+    second: {fileID: 2800000, guid: d7e1afc65ddbcfe4691b39471450160a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje35_
+    second: {fileID: 2800000, guid: 1d12a6de16032f84aba5eb61f7e6d597, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje36_
+    second: {fileID: 2800000, guid: 76adcbd08b5926a478e1c675269da552, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje37_
+    second: {fileID: 2800000, guid: f047b6063d1c6ac42859a88ceeb6b2b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje38_
+    second: {fileID: 2800000, guid: f9368af9776c2274db4ee05d2f7ba2a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje39_
+    second: {fileID: 2800000, guid: a698c7352478f584fa98054dc7e9ad5e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje3_
+    second: {fileID: 2800000, guid: abff6d31155c2a34a9e7f3f698b5b510, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje40_
+    second: {fileID: 2800000, guid: 35e2b93a025dded44983e76faa776c44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje41_
+    second: {fileID: 2800000, guid: 46a411ac6193ed64497c028a792f70e8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje42_
+    second: {fileID: 2800000, guid: 93ad04cbf2569a347a53bc34ef639287, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje43_
+    second: {fileID: 2800000, guid: f117291743c99c343a730e4e718ca599, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje44_
+    second: {fileID: 2800000, guid: 2ff966a8844e6484ead83d7a8c78cdf0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje45_
+    second: {fileID: 2800000, guid: ece323bfec18f7047b15e3c664b7bab5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje46_
+    second: {fileID: 2800000, guid: 4b08c2d5f4324b946ac55345e365f626, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje47_
+    second: {fileID: 2800000, guid: 5bed696e8d419514aaaed1fd5591f8c1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje48_
+    second: {fileID: 2800000, guid: 8f2d9027af005914d8ca098124686267, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje49_
+    second: {fileID: 2800000, guid: 6f3fda5229931774c85db031a6960c11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje4_
+    second: {fileID: 2800000, guid: 9cab63bdf761ee241803b181dd1cba2d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje50_
+    second: {fileID: 2800000, guid: cdc4de2b73c120f42aedd136352bc232, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje51_
+    second: {fileID: 2800000, guid: ff7ced6cf3062a54e9af2ff5e4165778, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje52_
+    second: {fileID: 2800000, guid: c5820448aaaed714e9d315d1706dd9ce, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje53_
+    second: {fileID: 2800000, guid: 4bb7949d600270644adb3d313e30181c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje54_
+    second: {fileID: 2800000, guid: 0fd5ba2d980811e4f9224dce0fdeb7ff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje55_
+    second: {fileID: 2800000, guid: ab7e7972978c74f4ebb4882d66ffc591, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje56_
+    second: {fileID: 2800000, guid: 30a4cbb161b22824ca4315907653bb54, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje57_
+    second: {fileID: 2800000, guid: ce132bccc400e814eb696b25728bb4fa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje58_
+    second: {fileID: 2800000, guid: 334a3f5513d5b5942885a39d46e0d639, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje59_
+    second: {fileID: 2800000, guid: 0134c32a99df71443b4de61a15609c20, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje5_
+    second: {fileID: 2800000, guid: 97ff8edbf2414004fb615e00c42ea73b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje60_
+    second: {fileID: 2800000, guid: e41c5510c517cd1489914885d9e37ccf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje6_
+    second: {fileID: 2800000, guid: 66c49722be397c640a1840afe58c7f23, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje7_
+    second: {fileID: 2800000, guid: fb4d614d99484bd478d9e6921d4c8e0f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje8_
+    second: {fileID: 2800000, guid: ac2cd15c98128e74eae349ec11253e61, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Maje9_
+    second: {fileID: 2800000, guid: c278cccfc62854f478ce95425e2ae2ba, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
