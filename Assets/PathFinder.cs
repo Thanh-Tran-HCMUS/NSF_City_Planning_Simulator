@@ -403,7 +403,7 @@ public class PathFinder : MonoBehaviour
         int a1 = graphData.allStreets[numStreet1].center.ID;
         int b1 = graphData.allStreets[numStreet2].center.ID;
         List<Path> currentPaths1 = AddRealtimePath(a1, b1);
-        Debug.Log("Select street 1: " + a1 + " to " + b1);
+        //Debug.Log("Select street 1: " + a1 + " to " + b1);
         numStreet1 = getNumStreetFromID(idStreet1);
         numStreet2 = numStreet1;
         if (numStreet1 >= 0)
@@ -419,7 +419,7 @@ public class PathFinder : MonoBehaviour
         int a2 = graphData.allStreets[numStreet1].center.ID;
         int b2 = graphData.allStreets[numStreet2].center.ID;
         List<Path> currentPaths2 = AddRealtimePath(a2, b2);
-        Debug.Log("Select street 2: " + a2 + " to " + b2);
+        //Debug.Log("Select street 2: " + a2 + " to " + b2);
         while (i < numberCar)
         {
             //spawCarInStreet(numStreet1, numStreet2, idCar);
