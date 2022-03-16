@@ -148,6 +148,7 @@ public class PathFollower : MonoBehaviour {
             target = path[index].PosOfB + dir * back;
             //yield return new WaitForFixedUpdate();
             velocity = Mathf.SmoothDamp(velocity, tar, ref colo, 0.3f);
+
             if (dist >= 0.1f) {
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(target - transform.position), 100f * Time.deltaTime);
                 transform.position = transform.position + transform.forward * velocity * Time.deltaTime * 1;
@@ -158,6 +159,7 @@ public class PathFollower : MonoBehaviour {
             //mesh.material = material;
             yield return null;
         }
+        
         path[index].LeaveQueue();
         if (returningType == -1) {
             //Destroy(gameObject);
@@ -182,11 +184,17 @@ public class PathFollower : MonoBehaviour {
     IEnumerator countdownToDisable()
     {
         //yield return null;
-        float duration = 1200 / PathFinder.Instance.TimeScale;
+        float duration = 600f / PathFinder.Instance.TimeScale;
         float totalTime = 0f;
         while (totalTime <= duration)
         {
             totalTime += Time.deltaTime;
+            /*if (totalTime > 10f && velocity <= 0.1f)
+            {
+                gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
+                gameObject.SetActive(false);
+                break;
+            }*/
             yield return null;
         }
         gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);

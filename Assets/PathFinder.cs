@@ -434,7 +434,7 @@ public class PathFinder : MonoBehaviour
             amount++;
             i++;
 
-            delay = 60f / (float)numberCar + 0.2f;
+            delay = 60f / (float)numberCar; //+ 0.2f;
 
             //if (idCar == 0)
             //{
@@ -452,7 +452,7 @@ public class PathFinder : MonoBehaviour
             //{
             //    delay = 1f;
             //}
-            yield return new WaitForSeconds(delay + 0.5f);
+            yield return new WaitForSeconds(delay);// + 0.5f);
             //yield return new WaitForSeconds(1f);
         }
     }
