@@ -34,12 +34,12 @@ public class PathFollower : MonoBehaviour {
 
     public void BeginCountToDisable()
     {
-        StartCoroutine(countdownToDisable());
+        //StartCoroutine(countdownToDisable());
     }
 
     void OnEnable()
     {
-        StartCoroutine(countdownToDisable());
+        //StartCoroutine(countdownToDisable());
     }
 
     private void Update()
@@ -60,21 +60,23 @@ public class PathFollower : MonoBehaviour {
         if (routine != null) {
             StopCoroutine(routine);
         }
+        //StartCoroutine(countdownToDisable(Path));
         routine = StartCoroutine(FollowRoutine(Path));
     }
+    int index;
     /// <summary>
     /// Routine is responsible for driving the vehicle along the route
     /// </summary>
     /// <param name="path">List of paths making the route</param>
     IEnumerator FollowRoutine(List<Path> path) {
-        Debug.Log("follow path: " + path.Count);
+        //Debug.Log("follow path: " + path.Count);
         if (path == null || path.Count < 1) {
             Debug.Log("path empty");
             yield break;
         }
         int QueuePos;
         //Color[] gradient = { Color.white, Color.green, Color.blue, Color.red };
-        int index = 0;
+        index = 0;
         int end = path.Count;
         float dist, dist1, colo = 0;
         bool endpoint = false;
@@ -147,8 +149,22 @@ public class PathFollower : MonoBehaviour {
             }
             target = path[index].PosOfB + dir * back;
             //yield return new WaitForFixedUpdate();
-            velocity = Mathf.SmoothDamp(velocity, tar, ref colo, 0.3f);
-
+            velocity = Mathf.SmoothDamp(velocity, tar, ref colo, 0.5f);
+            if (velocity == 0.1f)
+            {
+                Debug.Log("stuck here, remove vehicles");
+                
+                gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
+                gameObject.SetActive(false);
+                path[index].LeaveQueue();
+                break;
+            }
+            /*if (velocity <= 0.1f) index = end - 1;
+            if (index + 1 == end)
+            {
+                break;
+            }*/
+            //velocity = tar;
             if (dist >= 0.1f) {
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(target - transform.position), 100f * Time.deltaTime);
                 transform.position = transform.position + transform.forward * velocity * Time.deltaTime * 1;
@@ -163,11 +179,12 @@ public class PathFollower : MonoBehaviour {
         path[index].LeaveQueue();
         if (returningType == -1) {
             //Destroy(gameObject);
+            Debug.Log(gameObject.ToString() + "done path, deleted");
             gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
             gameObject.SetActive(false);
         } else {
             //mesh.enabled = false;
-            yield return new WaitForSeconds(returningDelay);
+            //yield return new WaitForSeconds(returningDelay);
             //mesh.enabled = true;
             if (returningPath[0].street) {
                 returningPath[0].street.spawns[returningType]--;
@@ -181,10 +198,10 @@ public class PathFollower : MonoBehaviour {
     /// </summary>
     public void StopFollowing() { StopAllCoroutines(); }
 
-    IEnumerator countdownToDisable()
+    IEnumerator countdownToDisable(List<Path> path)
     {
         //yield return null;
-        float duration = 600f / PathFinder.Instance.TimeScale;
+        float duration = 900f / PathFinder.Instance.TimeScale;
         float totalTime = 0f;
         while (totalTime <= duration)
         {
@@ -197,6 +214,9 @@ public class PathFollower : MonoBehaviour {
             }*/
             yield return null;
         }
+
+        //Debug.Log("start disable");
+        path[index].LeaveQueue();
         gameObject.transform.position = new Vector3(1000f, 1000f, 1000f);
         gameObject.SetActive(false);
 

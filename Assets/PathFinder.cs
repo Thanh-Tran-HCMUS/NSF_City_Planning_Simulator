@@ -377,7 +377,7 @@ public class PathFinder : MonoBehaviour
     {
         int i = 0;
         float delay = 0f;
-        int maxRangeNeighbor = 50;
+        int maxRangeNeighbor = Random.Range(20, 60);
         int idStreet1 = getIDFromStreet(street1);
         int numStreet1 = getNumStreetFromID(idStreet1);
         int numStreet2 = numStreet1;
@@ -465,7 +465,7 @@ public class PathFinder : MonoBehaviour
         {
             cars.RemoveAll(item => item == null);
             amount = cars.Count;
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0);
         }
     }
     /// <summary>
@@ -814,7 +814,7 @@ public class PathFinder : MonoBehaviour
             nodes = FindShortedPathSynchronousInternal(a, b);
         //Debug.Log(nodes.Count);
         }
-        Debug.Log(nodes.Count);
+        //Debug.Log(nodes.Count);
         List<Path> path = NodesToPath(nodes);
         return path;
     }

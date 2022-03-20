@@ -111,8 +111,8 @@ public class LoadDataFromServer : MonoBehaviour
         }
         else
         {
-            Debug.Log("Vao day nhe 01");
-            Debug.Log(www.downloadHandler.text);
+            //Debug.Log("Vao day nhe 01");
+            //Debug.Log(www.downloadHandler.text);
             string tmp = www.downloadHandler.text;
             var lines = tmp.Split('\n');
             foreach (var line in lines)
@@ -159,14 +159,14 @@ public class LoadDataFromServer : MonoBehaviour
         {
             for (int i = 0; i < 120; i++)
             {
-                Debug.Log("textfiles.Count: " + textfiles.Count);
+                //Debug.Log("textfiles.Count: " + textfiles.Count);
                 for (int j = 0; j < textfiles.Count; j++)
                 {
                     string nameStr = txtFileName[j];
-                    Debug.Log(textfiles[j][i][0]);
-                    Debug.Log(textfiles[j][i][1]);
-                    Debug.Log(textfiles[j][i][2]);
-                    Debug.Log(textfiles[j][i][3]);
+                    //Debug.Log(textfiles[j][i][0]);
+                    //Debug.Log(textfiles[j][i][1]);
+                    //Debug.Log(textfiles[j][i][2]);
+                    //Debug.Log(textfiles[j][i][3]);
 
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][0]/3, nameStr, 0));
                     yield return new WaitForSeconds(1);
@@ -177,17 +177,17 @@ public class LoadDataFromServer : MonoBehaviour
                     StartCoroutine(pathFinder.Spawn(textfiles[j][i][3]/3, nameStr, 3));
                     yield return new WaitForSeconds(15f);
                 }
-                Debug.Log("Batdaudoi");
+                //Debug.Log("Batdaudoi");
                 int waitTime = (int)(60 / speedSlider.value);
                 yield return new WaitForSeconds(waitTime);
-                Debug.Log("Doixong");
+                //Debug.Log("Doixong");
             }
         }  
     }
    
     void ParseFile(string path)
     {
-        Debug.Log("parseFile");
+        //Debug.Log("parseFile");
         char[] separators = { ',', ';', '|',' ' };
         string[] strValues = path.Split(separators);
         List<int> intValues = new List<int>();
@@ -201,7 +201,7 @@ public class LoadDataFromServer : MonoBehaviour
     }
     void printData()
     {
-        Debug.Log(dataList.Count);
+        //Debug.Log(dataList.Count);
         for (int i = 0; i < dataList.Count; i++)
         {
             Debug.Log(dataList[i].Count);
