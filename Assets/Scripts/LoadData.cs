@@ -45,11 +45,21 @@ public class LoadData : MonoBehaviour
     public ListCity City;
     public Slider speedSlider;
     private string[] txtFileName;
+
     // Start is called before the first frame update
     void Start()
     {
+        DataByDate.changehandler = changeDate;
         pathFinder = pathFinderObj.GetComponent<PathFinder>();
-        string myPath = Application.dataPath + "/Data/"+get_City()+"/";
+        string myPath = Application.dataPath + "/Data/"+get_City()+"/"+ DataByDate.Date+"/";
+        Debug.Log(myPath);
+        var files = new TextFiles(myPath);
+        listFileTxt(myPath);
+        StartCoroutine(dataSpawn(files));
+    }
+    public void changeDate()
+    {
+        string myPath = Application.dataPath + "/Data/" + get_City() + "/" + DataByDate.Date + "/";
         Debug.Log(myPath);
         var files = new TextFiles(myPath);
         listFileTxt(myPath);
