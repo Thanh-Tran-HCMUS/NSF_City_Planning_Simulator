@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Values : Collection<int>
 {
@@ -64,6 +65,8 @@ public class LoadData : MonoBehaviour
         var files = new TextFiles(myPath);
         listFileTxt(myPath);
         StartCoroutine(dataSpawn(files));
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//reset current scene#bao
+        Debug.Log("Change date then reset scene");// debug#bao
     }
     private void listFileTxt(string myPath)
     {
