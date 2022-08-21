@@ -52,7 +52,12 @@ public class LoadData : MonoBehaviour
     {
         DataByDate.changehandler = changeDate;
         pathFinder = pathFinderObj.GetComponent<PathFinder>();
-        string myPath = Application.dataPath + "/Data/"+get_City()+"/"+ DataByDate.Date+"/";
+        string myPath;
+#if UNITY_ANDROID
+        myPath = Application.streamingAssetsPath + "/Data/"+get_City()+"/"+ DataByDate.Date+"/";
+#else
+        myPath = Application.dataPath + "/Data/"+get_City()+"/"+ DataByDate.Date+"/";
+#endif
         Debug.Log(myPath);
         var files = new TextFiles(myPath);
         listFileTxt(myPath);
@@ -60,7 +65,12 @@ public class LoadData : MonoBehaviour
     }
     public void changeDate()
     {
-        string myPath = Application.dataPath + "/Data/" + get_City() + "/" + DataByDate.Date + "/";
+        string myPath;
+#if UNITY_ANDROID
+        myPath = Application.streamingAssetsPath + "/Data/"+get_City()+"/"+ DataByDate.Date+"/";
+#else
+        myPath = Application.dataPath + "/Data/" + get_City() + "/" + DataByDate.Date + "/";
+#endif
         Debug.Log(myPath);
         var files = new TextFiles(myPath);
         listFileTxt(myPath);
