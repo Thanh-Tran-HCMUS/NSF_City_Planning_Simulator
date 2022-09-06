@@ -13,6 +13,7 @@ public class SkyController : MonoBehaviour
     void Start()
     {
         ChangeDayTime();
+        //ChangeNightTime();
     }
 
     // Update is called once per frame
