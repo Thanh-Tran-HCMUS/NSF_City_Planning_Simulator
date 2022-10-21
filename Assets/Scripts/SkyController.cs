@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using VLB;
 
+public delegate void changedaynight();
+
 public class SkyController : MonoBehaviour
 {
     public Material nightSky;
@@ -10,11 +12,28 @@ public class SkyController : MonoBehaviour
     public Material daySky;
     public GameObject DirectionLightDay;
     // Start is called before the first frame update
+    private static bool day = true;
+    public static changedaynight changedaynighthandler = null;
+
+    public static bool DayNight
+    {
+        get => day;
+        set
+        {
+            day = value;
+            changedaynighthandler?.Invoke();
+        }
+    }
+
     void Start()
     {
-        ChangeDayTime();
-        //ChangeNightTime();
-    }
+        if (day)
+        {
+            ChangeDayTime();
+        }
+        else
+            ChangeNightTime();
+    } 
 
     // Update is called once per frame
     void Update()
@@ -34,6 +53,7 @@ public class SkyController : MonoBehaviour
             light.transform.GetComponent<Light>().enabled = true;
             light.transform.GetComponent<VolumetricLightBeam>().enabled = true;
         }
+        day = false;
     }
 
     public void ChangeDayTime()
@@ -48,5 +68,6 @@ public class SkyController : MonoBehaviour
             light.transform.GetComponent<Light>().enabled = false;
             light.transform.GetComponent<VolumetricLightBeam>().enabled = false;
         }
+        day = true;
     }
 }
