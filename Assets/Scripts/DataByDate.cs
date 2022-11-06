@@ -46,10 +46,20 @@ public class DataByDate : MonoBehaviour
         }
         else if (date == "Jan01")
         {
-            gameObject.GetComponent<HorizontalSelector>().index = 2;
+            gameObject.GetComponent<HorizontalSelector>().index = 4;
             gameObject.GetComponent<HorizontalSelector>().UpdateUI();
         }
         else if (date == "Sep06")
+        {
+            gameObject.GetComponent<HorizontalSelector>().index = 5;
+            gameObject.GetComponent<HorizontalSelector>().UpdateUI();
+        }
+        else if (date == "April22")
+        {
+            gameObject.GetComponent<HorizontalSelector>().index = 2;
+            gameObject.GetComponent<HorizontalSelector>().UpdateUI();
+        }
+        else if (date == "Oct30")
         {
             gameObject.GetComponent<HorizontalSelector>().index = 3;
             gameObject.GetComponent<HorizontalSelector>().UpdateUI();
@@ -78,5 +88,21 @@ public class DataByDate : MonoBehaviour
     public void dataSep06()
     {
         Date = "Sep06";
+    }
+    public void dataOct24()
+    {
+        Date = "Oct24";
+    }
+    public void dataMar03()
+    {
+        Date = "Mar03";
+    }
+    public void dataApril22()
+    {
+        Date = "April22";
+    }
+    public void dataOct30()
+    {
+        Date = "Oct30";
     }
 }
