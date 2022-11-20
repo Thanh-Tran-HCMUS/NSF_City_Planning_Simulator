@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class CameraData
 {
-    public string camName;
-    public float[] camPosition;
+    // script in canvas video object
+    public string Name;
+    public float[] Position;
 
     public CameraData(GameObject cam)
     {
-        camName = cam.name;
-        camPosition = new float[3];
-        camPosition[0] = cam.transform.position.x;
-        camPosition[1] = cam.transform.position.y;
-        camPosition[2] = cam.transform.position.z;
+        Name = cam.name;
+        Position = new float[3];
+        Position[0] = cam.transform.position.x;
+        Position[1] = cam.transform.position.y;
+        Position[2] = cam.transform.position.z;
     }
 }
