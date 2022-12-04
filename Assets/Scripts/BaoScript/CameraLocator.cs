@@ -9,11 +9,12 @@ using System.Linq;
 public class CameraLocator : MonoBehaviour
 {
     private CameraData cameraData;  // call class object
-    public GameObject[] streetCamera;
+    private GameObject[] streetCamera;
     private string filePath;
     string filename = "cameralocation.json";
 
     public List<CameraData> camList = new List<CameraData>(); // class object list 
+    public List<CameraData> importCamList = new List<CameraData>();
 
     public void AddDataToLIST(GameObject g) // method to add 
     {
@@ -25,7 +26,7 @@ public class CameraLocator : MonoBehaviour
     void Start()
     {
         Debug.Log("Tag camera with StreetCam, then press C to save location");
-        camList = FromJSON<CameraData>(filename);
+        importCamList = FromJSON<CameraData>(filename);
         
     }
     void Update()
@@ -33,13 +34,20 @@ public class CameraLocator : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             Debug.Log("Data store to: "+GetPath(filename));
+            camList.Clear();
+
+            if (File.Exists(GetPath(filename)))
+            {
+                File.Delete(GetPath(filename));
+            }
+
             streetCamera = GameObject.FindGameObjectsWithTag("StreetCam");
 
             if (streetCamera.Length == 0)
             {
                 Debug.Log("No camera found!");
             }
-
+            camList.Clear();
             foreach (GameObject g in streetCamera)
             {
                 AddDataToLIST(g);
