@@ -115,6 +115,7 @@ public class Path {
     /// </summary>
     public float Cost {
         get { return CurrentQueue + cost; }
+        set { cost = value; }
     }
 
     /// <summary>
