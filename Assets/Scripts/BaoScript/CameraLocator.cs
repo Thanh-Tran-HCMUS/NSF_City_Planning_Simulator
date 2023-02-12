@@ -22,18 +22,21 @@ public class CameraLocator : MonoBehaviour
         ToJSON<CameraData>(camList, filename);// classify type and give list 
     }
 
-    // Start is called before the first frame update
+    void Awake()
+    {
+        importCamList = FromJSON<CameraData>(filename);
+    }
+    
     void Start()
     {
         Debug.Log("Tag camera with StreetCam, then press C to save location");
-        importCamList = FromJSON<CameraData>(filename);
-        
     }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Debug.Log("Data store to: "+GetPath(filename));
+            Debug.Log("-----CAMERA DATA SAVED IN-----: "+GetPath(filename));
             camList.Clear();
 
             if (File.Exists(GetPath(filename)))
