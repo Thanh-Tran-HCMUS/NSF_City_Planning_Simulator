@@ -64,6 +64,26 @@ public class DataByDate : MonoBehaviour
             gameObject.GetComponent<HorizontalSelector>().index = 3;
             gameObject.GetComponent<HorizontalSelector>().UpdateUI();
         }
+        else if (date == "August29")
+        {
+            gameObject.GetComponent<HorizontalSelector>().index = 6;
+            gameObject.GetComponent<HorizontalSelector>().UpdateUI();
+        }
+        else if (date == "July06")
+        {
+            gameObject.GetComponent<HorizontalSelector>().index = 7;
+            gameObject.GetComponent<HorizontalSelector>().UpdateUI();
+        }
+        else if (date == "June16")
+        {
+            gameObject.GetComponent<HorizontalSelector>().index = 8;
+            gameObject.GetComponent<HorizontalSelector>().UpdateUI();
+        }
+        else if (date == "March02")
+        {
+            gameObject.GetComponent<HorizontalSelector>().index = 9;
+            gameObject.GetComponent<HorizontalSelector>().UpdateUI();
+        }
     }
     public void clickOn()
     {
@@ -101,8 +121,24 @@ public class DataByDate : MonoBehaviour
     {
         Date = "April22";
     }
+    public void dataAugust29()
+    {
+        Date = "August29";
+    }
     public void dataOct30()
     {
         Date = "Oct30";
+    }
+    public void dataJuly06()
+    {
+        Date = "July06";
+    }
+    public void dataJune16()
+    {
+        Date = "June16";
+    }
+    public void dataMarch02()
+    {
+        Date = "March02";
     }
 }
