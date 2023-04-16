@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class FloodSystem : MonoBehaviour
 {
-    [SerializeField] GameObject daywaterPrefab;
+    public GameObject daywaterPrefab;
     [SerializeField] GameObject nightwaterPrefab;
 
     public string floodcam;// test flood location
 
     public CameraLocator script; //call script
-    Dictionary<string, CameraData> dictionary = new Dictionary<string, CameraData>();//create dictotionary type
-
+    public Dictionary<string, CameraData> dictionary = new Dictionary<string, CameraData>();//create dictotionary type
+    // radius componets adjustable 
     
     void Start()
     {
@@ -21,10 +21,12 @@ public class FloodSystem : MonoBehaviour
             dictionary.Add(a.Name, a);
         }
 
-        var temp = dictionary[floodcam];
-        Debug.Log("-----TEST----- flooding at: " + temp.Name);
+        //test with temp var, redo later 
+        //var temp = dictionary[floodcam];
+        //Debug.Log("-----TEST----- flooding at: " + temp.Name);
         //Debug.Log(temp.Position[0]);
-        FloodSpawner(temp);
+        //FloodCamera(temp);
+        //Debug.Log("dictionary.Count);
     }
      
     
@@ -33,8 +35,9 @@ public class FloodSystem : MonoBehaviour
         
     }
 
-    private void FloodSpawner(CameraData d)
+    private void FloodCamera(CameraData d)
     {
-        Instantiate(daywaterPrefab, new Vector3(d.Position[0], 37.95692f, d.Position[2]), Quaternion.identity);
+        //Instantiate(daywaterPrefab, new Vector3(d.Position[0], 37.95692f, d.Position[2]), Quaternion.identity);
     }
+
 }

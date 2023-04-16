@@ -10,6 +10,7 @@ public class CameraData
     // script in canvas video object
     public string Name;
     public float[] Position;
+    public bool Flood;
 
     public CameraData(GameObject cam)
     {
@@ -18,6 +19,7 @@ public class CameraData
         Position[0] = cam.transform.position.x;
         Position[1] = cam.transform.position.y;
         Position[2] = cam.transform.position.z;
+        Flood = false;
     }
 
    

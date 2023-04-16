@@ -68,7 +68,7 @@ public class ClockControl : MonoBehaviour
         }
         else
         {
-            Debug.Log("check timer ui active object");
+            //Debug.Log("check timer ui active object");
         }
     }
 

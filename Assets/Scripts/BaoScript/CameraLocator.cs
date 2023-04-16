@@ -21,12 +21,10 @@ public class CameraLocator : MonoBehaviour
         camList.Add(new CameraData(g));
         ToJSON<CameraData>(camList, filename);// classify type and give list 
     }
-
     void Awake()
     {
         importCamList = FromJSON<CameraData>(filename);
     }
-    
     void Start()
     {
         Debug.Log("Tag camera with StreetCam, then press C to save location");
