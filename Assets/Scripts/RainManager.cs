@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class RainManager : MonoBehaviour
 {
+    public GameObject Rain;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +21,11 @@ public class RainManager : MonoBehaviour
 
     public void TurnRainOn()
     {
-
+        Rain.SetActive(true);
     }
 
     public void TurnRainOff()
     {
-
+        Rain.SetActive(false);
     }
 }
