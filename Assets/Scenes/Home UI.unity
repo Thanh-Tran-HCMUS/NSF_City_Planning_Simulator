@@ -7234,7 +7234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114363057448973506, guid: afd3474ebc6b70043ba8a1540f3111c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: ThuDucCity
+      value: ThuDucCityView
       objectReference: {fileID: 0}
     - target: {fileID: 114363057448973506, guid: afd3474ebc6b70043ba8a1540f3111c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -9575,7 +9575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114363057448973506, guid: afd3474ebc6b70043ba8a1540f3111c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: District1
+      value: District1View
       objectReference: {fileID: 0}
     - target: {fileID: 114363057448973506, guid: afd3474ebc6b70043ba8a1540f3111c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -12249,10 +12249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c02d941c4fd4c54a9a3de039909e362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundImage: {fileID: 21300000, guid: cd65830e6373d9d448046ceb3b6bebf2, type: 3}
+  backgroundImage: {fileID: 0}
   buttonTitle: DISTRICT 1
   buttonDescription: Traffic Visualization
-  useCustomResources: 0
+  useCustomResources: 1
   enableStatus: 1
   statusItem: 0
 --- !u!114 &114169537604664250
@@ -12267,10 +12267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c02d941c4fd4c54a9a3de039909e362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundImage: {fileID: 21300000, guid: cd65830e6373d9d448046ceb3b6bebf2, type: 3}
+  backgroundImage: {fileID: 0}
   buttonTitle: THU DUC
   buttonDescription: 
-  useCustomResources: 0
+  useCustomResources: 1
   enableStatus: 1
   statusItem: 2
 --- !u!114 &114213109214750880

@@ -31,12 +31,12 @@ MonoBehaviour:
   dropdownItemFont: {fileID: 11400000, guid: 4bd810f1cbcb0f446a8f5a31453e243f, type: 2}
   dropdownItemFontSize: 22.5
   dropdownThemeType: 0
-  dropdownFont: {fileID: 11400000, guid: 4bd810f1cbcb0f446a8f5a31453e243f, type: 2}
-  dropdownFontSize: 25
-  dropdownColor: {r: 0.21568628, g: 0.29411766, b: 0.37254903, a: 1}
+  dropdownFont: {fileID: 11400000, guid: 581c047ed60765249b12f37ff2895497, type: 2}
+  dropdownFontSize: 40
+  dropdownColor: {r: 0, g: 0.63529414, b: 1, a: 0.8627451}
   dropdownTextColor: {r: 1, g: 1, b: 1, a: 1}
   dropdownIconColor: {r: 1, g: 1, b: 1, a: 1}
-  dropdownItemColor: {r: 0.13725491, g: 0.21568628, b: 0.29411766, a: 1}
+  dropdownItemColor: {r: 0.16470589, g: 0.50980395, b: 0.7058824, a: 1}
   dropdownItemTextColor: {r: 1, g: 1, b: 1, a: 1}
   dropdownItemIconColor: {r: 255, g: 255, b: 255, a: 1}
   selectorFont: {fileID: 11400000, guid: 581c047ed60765249b12f37ff2895497, type: 2}
@@ -92,7 +92,7 @@ MonoBehaviour:
   toggleBorderColor: {r: 1, g: 1, b: 1, a: 1}
   toggleBackgroundColor: {r: 1, g: 1, b: 1, a: 0.29411766}
   toggleCheckColor: {r: 1, g: 1, b: 1, a: 1}
-  tooltipFont: {fileID: 11400000, guid: 4bd810f1cbcb0f446a8f5a31453e243f, type: 2}
-  tooltipFontSize: 22
+  tooltipFont: {fileID: 11400000, guid: 581c047ed60765249b12f37ff2895497, type: 2}
+  tooltipFontSize: 25
   tooltipTextColor: {r: 1, g: 1, b: 1, a: 1}
-  tooltipBackgroundColor: {r: 0.1764706, g: 0.25490198, b: 0.33333334, a: 1}
+  tooltipBackgroundColor: {r: 0.32156864, g: 0.56078434, b: 0.69803923, a: 1}
